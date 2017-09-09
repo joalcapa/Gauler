@@ -11,6 +11,7 @@
             "homepage": "https://www.joalcapa.com.ve"
         }
     ],
+    "minimum-stability" : "beta",
     "autoload": {
         "psr-4": {
         "Gauler\\": "src/"
