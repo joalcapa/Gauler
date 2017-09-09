@@ -12,10 +12,10 @@
 |
 */
 
-$app = new Fundamentary\App\Application(realpath(__DIR__.'/../'));
+$app = new Joalcapa\Fundamentary\App\Application(realpath(__DIR__.'/../'));
 
-$app->addKernelSingleton(Fundamentary\Http\Kernel::class);
+$app->addKernelSingleton(Joalcapa\Fundamentary\Http\Kernel::class);
 
-$app->addKernelSingleton(Fundamentary\Exception\Kernel::class);
+$app->addKernelSingleton(Joalcapa\Fundamentary\Exception\Kernel::class);
 
 return $app;
