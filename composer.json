@@ -1,0 +1,23 @@
+{
+    "name": "Joalcapa/Gauler",
+    "description": "the api gauler",
+    "keywords": ["API", "Gauler"],
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "José Cáceres",
+            "email": "josecaceres.oreul@gmail.com",
+            "site": "https://www.joalcapa.com.ve"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+        "Joalcapa\\Gauler\\": "src/"
+    }
+     },
+    "require": {
+        "firebase/php-jwt": "^5.0",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}

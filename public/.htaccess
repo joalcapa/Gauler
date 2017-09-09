@@ -1,0 +1,25 @@
+<ifModule mod_headers.c>
+    #establece toda tu configuración aquí
+    Header always set Access-Control-Allow-Headers "Authorization"
+</ifModule>
+ 
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteRule ^api-rest/index\.php$ - [L]
+    RewriteRule ^api$ api-rest/index.php [L]
+    RewriteRule ^api/.* api-rest/index.php [L]
+
+    RewriteRule ^index\.html$ - [L]
+    RewriteRule ^.* index.html [L]
+</IfModule>
+
+
+#RewriteEngine on
+
+#RewriteRule ^api-rest/index\.php$ - [L]
+#RewriteRule ^api$ api-rest/index.php [L]
+#RewriteRule ^api/.* api-rest/index.php [L]
+
+#RewriteRule ^index\.html$ - [L]
+#RewriteRule ^.* index.html [L]
