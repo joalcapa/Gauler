@@ -3,7 +3,7 @@
 namespace Api\Middlewares;
 
 use Auth;
-use Fundamentary\App\Middlewares\BaseMiddleware as Middleware;
+use Joalcapa\Fundamentary\App\Middlewares\BaseMiddleware as Middleware;
 
 class UsersMiddleware extends Middleware {
     
