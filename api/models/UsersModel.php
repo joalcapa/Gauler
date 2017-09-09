@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Models;
+namespace Gauler\Api\Models;
 
 use Joalcapa\Fundamentary\App\Models\BaseModel as Model;
 
