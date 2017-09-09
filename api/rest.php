@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Modelos Rest
@@ -10,7 +9,6 @@
 | para realizar la ejecución correspondiente
 |
 */
-
 /**
  * Definición del modelo, Gauler intentará ejecutar previamente una clase
  * middleware RestFull en caso de existir, posteriormente al filtrado realizará la ejecución del controlador,
@@ -20,7 +18,6 @@
  * del servicio de autenticación
  */
 RestFull::Model('users');
-
 /**
  * Si por el contrario considera que no es necesario la ejecución
  * de una clase middleware RestFull, con todos los métodos RestFull
@@ -29,12 +26,9 @@ RestFull::Model('users');
  * de lo contrario puede utilizar el mágic killer, para abortar la operación
  * con un código http que ud considere.
  */
-
 /*
-
 RestFull::Model('users', function($request) {
     // killer('401');
     return $request;
 });
-
 */

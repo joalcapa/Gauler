@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Roles de usuario
@@ -13,7 +12,6 @@
 | a los modelos que se registran en su array, de lo contrario
 | Gauler emitirá un error 401 NOT AUTORIZED.
 */
-
 return [
     'SuperUser' => [
         'Index' => [

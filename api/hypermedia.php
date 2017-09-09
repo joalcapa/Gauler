@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Modelo Hypermedia
@@ -14,7 +13,6 @@
 | {{id_user}} por el $id del estado temporal, puesto que Gauler no almacena
 | sesion alguna.
 */
-
 return [
     'SuperUser' => [
         'urlPassword' => env('HOST_API','http://localhost/app/public').'/api/users/{{id_user}}/resetpassword',
