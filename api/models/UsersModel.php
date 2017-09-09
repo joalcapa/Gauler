@@ -2,7 +2,7 @@
 
 namespace Api\Models;
 
-use Fundamentary\App\Models\BaseModel as Model;
+use Joalcapa\Fundamentary\App\Models\BaseModel as Model;
 
 class UsersModel extends Model {
     
