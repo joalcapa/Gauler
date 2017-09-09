@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Controllers;
+namespace Gauler\Api\Controllers;
 
 use Joalcapa\Fundamentary\App\Controllers\BaseController as Controller;
 use Api\Models\UsersModel as User;
