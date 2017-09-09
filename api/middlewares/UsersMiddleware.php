@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Middlewares;
+namespace Gauler\Api\Middlewares;
 
 use Auth;
 use Joalcapa\Fundamentary\App\Middlewares\BaseMiddleware as Middleware;
