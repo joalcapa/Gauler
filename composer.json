@@ -12,6 +12,12 @@
         }
     ],
     "minimum-stability" : "dev",
+    "repositories": [
+        {
+            "type": "project",
+            "url": "https://github.com/joalcapa/gauler"
+        }
+    ],
     "autoload": {
         "psr-4": {
         "Gauler\\": "src/"
