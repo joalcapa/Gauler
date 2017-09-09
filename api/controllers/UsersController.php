@@ -2,7 +2,7 @@
 
 namespace Api\Controllers;
 
-use Fundamentary\App\Controllers\BaseController as Controller;
+use Joalcapa\Fundamentary\App\Controllers\BaseController as Controller;
 use Api\Models\UsersModel as User;
 
 class UsersController extends Controller {
