@@ -3,7 +3,7 @@
 namespace Gauler\Api\Controllers;
 
 use Joalcapa\Fundamentary\App\Controllers\BaseController as Controller;
-use Api\Models\UsersModel as User;
+use Gauler\Api\Models\UsersModel as User;
 
 class UsersController extends Controller {
     
