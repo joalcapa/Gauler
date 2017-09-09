@@ -8,7 +8,7 @@
         {
             "name": "José Cáceres",
             "email": "josecaceres.oreul@gmail.com",
-            "site": "https://www.joalcapa.com.ve"
+            "homepage": "https://www.joalcapa.com.ve"
         }
     ],
     "autoload": {
