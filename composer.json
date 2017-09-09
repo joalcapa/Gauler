@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-        "Joalcapa\\Gauler\\": "src/"
+        "Gauler\\": "src/"
     }
      },
     "require": {
