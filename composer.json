@@ -22,5 +22,6 @@
         "firebase/php-jwt": "^5.0",
         "vlucas/phpdotenv": "^2.4"
     },
-    "minimum-stability" : "dev"
+    "minimum-stability": "RC",
+    "prefer-stable": true
 }
