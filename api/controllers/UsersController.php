@@ -13,9 +13,9 @@ class UsersController extends Controller {
      *
      * Index => return array GET http://.../users
      * Show => return array GET http://.../users/{$id}
-     * Store => return array POST http://.../users
-     * Update => return array PUT http://.../users/{$id}
-     * Destroy => return array DELETE http://.../users/{$id}
+     * Store => POST http://.../users
+     * Update => PUT http://.../users/{$id}
+     * Destroy => DELETE http://.../users/{$id}
      *
      * @param  \Fundamentary\Http\Interactions\Request\Request  $request
      * @return  array
