@@ -18,9 +18,7 @@
      },
     "require": {
         "php": ">=5.3.0",
-        "joalcapa/fundamentary": "^1.0",
-        "firebase/php-jwt": "^5.0",
-        "vlucas/phpdotenv": "^2.4"
+        "joalcapa/fundamentary": "^1.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
