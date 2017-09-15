@@ -14,3 +14,34 @@ ya que el modelo define claramente la lógica del negocio, y facilita en gran
 manera la implementación de diversos patrones como ActiveRecords, DAO, 
 para el desarrollo de sistemas de mapeo de objetos relacionales, comunmente conocido
 como ORMs.
+
+## Controladores RestFull
+
+La existencia del modelo en una api RestFull, requiere de un controlador propio que maneje 
+la lógica de negocios de una forma fluida, es por esto que existen propiedades, que están 
+sujetas a la forma como se accede a la api, y al endpoint que se realizá.
+
+Entre los metodos RestFull, encontramos:
+
+#### Index
+
+Gauler implementa esté método, para el alcance de una colección de datos asignados al modelo.
+
+#### Show
+
+Gauler implementa esté método, para el alcance de un recurso asignados al modelo.
+
+#### Store
+
+Gauler implementa esté método, para persistir en la base de datos una nueva instacia del modelo.
+
+#### Update
+
+Gauler implementa esté método, para el actualizar ciertas propiedades de una instancia del modelo.
+
+#### Destroy
+
+Gauler implementa esté método, para eliminar de forma permanente y en cascada una instancia del modelo.
+
+
+## FUNDAMENTARY el nucleo RestFull
