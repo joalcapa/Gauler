@@ -45,3 +45,14 @@ Gauler implementa esté método, para eliminar de forma permanente y en cascada 
 
 
 ## FUNDAMENTARY el nucleo RestFull
+
+Fundamentary es el nucleo por el cual Gauler ejecutá el proceso RestFull, Fundamentary proporcioná
+un completo y sincronizado sistema de busqueda del modelo asociado al endpoint, a su vez la ejecución de
+un método middleware en conjunto al modelo, por encambio si resulta ser la necesidad del proceso de filtrado
+para todos los métodos RestFull, Fundamentary ejecutá un closure.
+
+### Newler ORM
+
+Newler es el ORM de Fundamentary, por el cuál el acceso a la data se facilita en gran manera, para hacer esto posible
+Fundamentary implementa el patron ActiveRecords, proporcionando los métodos basicos, para la adecuada persistencia de
+datos, en el gestor de base de datos.
