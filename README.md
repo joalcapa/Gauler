@@ -1,4 +1,6 @@
+<p align="center">
 ![image GIF Meuler](https://dl.dropboxusercontent.com/s/l63oki54lkx3ule/gauler%20logo.png?dl=0)
+</p>
 
 ### Api  Rest
 
@@ -8,8 +10,8 @@ necesarios para la implementación de una Interfaz de programación para aplicac
 
 ## Controladores RestFull
 
-La existencia del modelo en una api RestFull, requiere de un controlador propio que maneje 
-su lógica de negocios de una forma fluida, es por esto que existen propiedades, que están 
+La existencia del modelo, requiere de un controlador propio que maneje 
+su lógica de negocios es por esto que existen propiedades, que están 
 sujetas a la forma como se accede a la api, y al endpoint que se realizá, entre los metodos RestFull como Index, Show, Store, Update, Destory.
 
 ## FUNDAMENTARY el nucleo RestFull
