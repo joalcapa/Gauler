@@ -1,6 +1,5 @@
-<p align="center">
-![image GIF Meuler](https://dl.dropboxusercontent.com/s/l63oki54lkx3ule/gauler%20logo.png?dl=0)
-</p>
+
+![image GIF Meuler](https://dl.dropboxusercontent.com/s/l63oki54lkx3ule/gauler%20logo.png?dl=0){ width="800" height="600" style="display: block; margin: 0 auto" }
 
 ### Api  Rest
 
