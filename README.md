@@ -1,14 +1,14 @@
-#### Gauler
+# Gauler
 Gauler es una api standar Rest
 
-## Controladores RestFull
+### Controladores RestFull
 
 La existencia del modelo, requiere de un controlador propio que maneje 
 su lógica de negocios es por esto que existen propiedades, que están 
 sujetas a la forma como se accede a la api, y al endpoint que se realizá,
 entre los metodos RestFull como Index, Show, Store, Update, Destory.
 
-## Fundamentary
+### Fundamentary
 nucleo RestFull
 
 Fundamentary es el nucleo por el cual Gauler ejecutá el proceso RestFull, Fundamentary proporcioná
