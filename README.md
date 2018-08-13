@@ -21,8 +21,10 @@ para todos los métodos RestFull, Fundamentary ejecutá un closure.
 ``` php
 /**
  * Definición del modelo, Gauler intentará ejecutar previamente una clase
- * middleware RestFull en caso de existir, posteriormente al filtrado realizará la ejecución del controlador,
- * aquél modelo que no se establezca en este archivo, emitirá un error 404 RESOURCE NOT FOUND.
+ * middleware RestFull en caso de existir,
+ * posteriormente al filtrado realizará la ejecución del controlador,
+ * aquél modelo que no se establezca en este archivo
+ * emitirá un error 404 RESOURCE NOT FOUND.
  *
  * El modelo 'users' es totalmente obligatorio para el funcionamiento 
  * del servicio de autenticación
