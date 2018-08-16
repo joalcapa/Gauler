@@ -24,7 +24,7 @@ RestFull::Model('users');
  * correspondientes, puede optar por la ejecución de un closure,
  * recordando retornar siempre $request, si el filtro es exitoso,
  * de lo contrario puede utilizar el mágic killer, para abortar la operación
- * con un código http que ud considere.
+ * con un código http que usted considere.
  */
 /*
 RestFull::Model('users', function($request) {
