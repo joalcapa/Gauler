@@ -20,3 +20,9 @@ para todos los métodos RestFull, Fundamentary ejecutá un closure.
 ``` php
 RestFull::Model('users');
 ```
+
+### Creando proyecto Gauler
+
+```
+composer create-project joalcapa/gauler
+```
