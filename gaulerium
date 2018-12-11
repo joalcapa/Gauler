@@ -6,6 +6,6 @@ require_once('./Vendor/Joalcapa/elementary/src/App/Application.php');
 
 $app = new \Joalcapa\Elementary\App\Application();
 
-$app->init($argv);
+$app->init();
 
 $app->sendResponse();
