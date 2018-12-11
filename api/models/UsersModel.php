@@ -9,7 +9,7 @@ class UsersModel extends Model {
     public static $model = 'Users';
     
     protected $tuples = [
-        'nombre',
+        'name',
         'email',
         'password'
     ]; 
