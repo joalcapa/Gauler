@@ -11,8 +11,7 @@ class UsersModel extends Model {
     protected $tuples = [
         'nombre',
         'email',
-        'password',
-        'id_rol'
+        'password'
     ]; 
     
     protected $hidden_tuples = [
