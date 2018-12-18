@@ -17,7 +17,7 @@
  * El modelo 'users' es totalmente obligatorio para el funcionamiento 
  * del servicio de autenticación
  */
-RestFull::Model('users');
+Rest::Model('users');
 /**
  * Si por el contrario considera que no es necesario la ejecución
  * de una clase middleware RestFull, con todos los métodos RestFull
@@ -27,7 +27,7 @@ RestFull::Model('users');
  * con un código http que usted considere.
  */
 /*
-RestFull::Model('users', function($request) {
+Rest::Model('users', function($request) {
     // killer('401');
     return $request;
 });
