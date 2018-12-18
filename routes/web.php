@@ -24,4 +24,4 @@ Web::get('route', function($request) {
  * puede determinar como segundo parametro el nombre del controlador
  * seguido del metodo que ejecuta la logica de negocios.
  */
-Web::get('route', 'controller@method');
+// Web::get('route', 'controller@method');
