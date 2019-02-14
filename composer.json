@@ -18,6 +18,8 @@
     "require": {
         "php": ">=5.5.0",
         "joalcapa/fundamentary": "^1.0",
-        "symfony/console": "^4.2"
+        "symfony/console": "^4.2",
+        "joalcapa/elementary": "^0.0.1",
+        "joalcapa/origins": "^0.0.1"
     }
 }
