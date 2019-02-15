@@ -8,9 +8,9 @@
  * @web      https://www.joalcapa.com.ve
  */
 
-require_once __DIR__.'/../../bootstrap/autoload.php';
+require_once __DIR__.'/../bootstrap/autoload.php';
 
-$app = require_once __DIR__.'/../../bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
 $app->init();
 
