@@ -6,3 +6,37 @@ Api standar Rest --
 ```
 composer create-project joalcapa/gauler
 ```
+
+## Gaulerium CLI
+Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
+migraciones, entre otras cosas
+
+###creando un modelo
+Para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
+puedes especificar los atributos del modelo
+```
+php gaulerium createModel heroe name:string,powerType:sting
+```
+
+El resultado es la creacion de una nueva clase en el directorio api/models del proyecto
+
+``` php
+<?php
+
+namespace Gauler\Api\Models;
+
+use Joalcapa\Fundamentary\App\Models\BaseModel as Model;
+
+class HeroesModel extends Model {
+
+	public static $model = 'Heroes';
+
+	protected $tuples = [
+		'name',
+		'powerType',
+	];
+
+	protected $hidden_tuples = [
+	];
+}
+```
