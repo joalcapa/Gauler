@@ -15,7 +15,7 @@ migraciones, entre otras cosas
 Para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
 puedes especificar los atributos del modelo
 ```
-php gaulerium createModel heroe name:string,powerType:sting
+php gaulerium createModel heroe [attr:type,....,attr:type]
 ```
 
 El resultado es la creacion de una nueva clase en el directorio api/models del proyecto
