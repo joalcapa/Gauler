@@ -134,6 +134,10 @@ El resultado es la creacion de una nueva clase en el directorio database/migrati
 que en el nombre del archivo se antepone la fecha en la cual fue creada la migracion en el formato TimesTamp, esto es necesarios para que
 Gauler tenga un control de las migraciones realizadas.
 
+```
+1550349238HeroesMigration.php
+```
+
 ``` php
 <?php
 
