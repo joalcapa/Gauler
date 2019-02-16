@@ -17,7 +17,7 @@ uri: /heroes/{id} el modelo asociado es: HeroesModel,
 para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
 puedes especificar los atributos del modelo.
 ```
-php gaulerium createModel heroe [attr=TypeAttrQ::TYPE,....,attr=TypeAttrQ::TYPE]
+php gaulerium createModel heroe [attr:TypeAttrQ::TYPE,....,attr:TypeAttrQ::TYPE]
 ```
 
 El resultado es la creacion de una nueva clase en el directorio api/models del proyecto.
