@@ -8,8 +8,8 @@ use Joalcapa\Elementary\Migrations\BaseMigration as Migration;
 class UserMigration extends Migration {
 
 	public $attributes = [
-	     'name' => TypeAttrQ::string,
-	     'email' => TypeAttrQ::string,
-	     'password' => TypeAttrQ::string
+	     'name' => TypeAttrQ::STRING,
+	     'email' => TypeAttrQ::STRING,
+	     'password' => TypeAttrQ::STRING
 	];
 }
