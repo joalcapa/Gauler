@@ -157,3 +157,12 @@ class HeroesMigration extends Migration {
 	];
 }
 ```
+
+## migrar a la base de datos
+Si deseas migrar a la base de datos bastara con ejecutar el siguiente comando,
+de esta forma Gauler ejecutara las migraciones almacenadas, de manera opcional puedes realizar la
+migracion de un solo modelo en la base de datos.
+
+```
+php gaulerium migrate [nameModel]
+```
