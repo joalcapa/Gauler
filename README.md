@@ -60,6 +60,9 @@ TypeAttrQ::BOOLEAN;
 TypeAttrQ::FLOAT;
 ```
 
+#### creacion del modelo y la migracion
+Si el modelo se crea con sus atributos, Gauler creara el correspondiente archivo de migracion asociado al modelo. 
+
 ### crear controlador
 Por defecto Gauler ejecuta un proceso CRUD automatico cuando no existe un controlador asociado al modelo, 
 en caso de que desees añadir logica en algun proceso de operacion CRUD, puedes optar por la creacion de un 
