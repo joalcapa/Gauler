@@ -3,7 +3,6 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-
 $app = new Joalcapa\Elementary\App\Application();
 
 $app->init();
