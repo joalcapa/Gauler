@@ -40,3 +40,55 @@ class HeroesModel extends Model {
 	];
 }
 ```
+
+### crear controlador
+Para crear un modelo, gaulerium necesita el nombre del controlador asociado al modelo
+```
+php gaulerium createController heroe
+```
+
+El resultado es la creacion de una nueva clase en el directorio api/controllers del proyecto
+
+``` php
+<?php
+
+namespace Gauler\Api\Controllers;
+
+class HeroesController extends Controller {
+
+	/**
+	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
+	* @return  array
+	*/
+	public function index($request) {		}
+
+
+	/**
+	* @param  $id
+	* @return  array
+	*/
+	public function show($id) {		}
+
+
+	/**
+	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
+	* @return  array
+	*/
+	public function store($request) {		}
+
+
+	/**
+	* @param  $id
+	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
+	* @return  array
+	*/
+	public function update($id, $request) {		}
+
+
+	/**
+	* @param  $id
+	* @return  array
+	*/
+	public function destroy($id) {		}
+}
+```
