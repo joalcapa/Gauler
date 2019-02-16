@@ -53,11 +53,11 @@ Gauler establece diferentes tipos de datos para los atributos de un modelo media
 utilizados tenemos:
 
 ``` php
-TypeAttrQ.STRING;
-TypeAttrQ.INTEGER;
-TypeAttrQ.DOUBLE;
-TypeAttrQ.BOOLEAN;
-TypeAttrQ.FLOAT;
+TypeAttrQ::STRING;
+TypeAttrQ::INTEGER;
+TypeAttrQ::DOUBLE;
+TypeAttrQ::BOOLEAN;
+TypeAttrQ::FLOAT;
 ```
 
 ### crear controlador
