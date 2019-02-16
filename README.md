@@ -13,7 +13,7 @@ migraciones, entre otras cosas.
 
 ### crear modelo
 Siendo Gauler una api REST, el modelo debe tener concordancia con el endpoint objetivo, ejemplo: para el 
-uri: /heroes/{id} el modelo asociado es: HeroresModel, 
+uri: /heroes/{id} el modelo asociado es: HeroesModel, 
 para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
 puedes especificar los atributos del modelo.
 ```
