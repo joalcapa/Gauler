@@ -42,7 +42,7 @@ class HeroesModel extends Model {
 ```
 
 ### crear controlador
-Para crear un modelo, gaulerium necesita el nombre del controlador asociado al modelo
+Para crear un controlador, gaulerium necesita el nombre del controlador asociado al modelo
 ```
 php gaulerium createController heroe
 ```
