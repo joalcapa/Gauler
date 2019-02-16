@@ -60,7 +60,7 @@ TypeAttrQ::BOOLEAN;
 TypeAttrQ::FLOAT;
 ```
 
-#### creacion del modelo y la migracion
+#### creacion del modelo con su migracion
 Si el modelo se crea con sus atributos, Gauler creara el correspondiente archivo de migracion asociado al modelo. 
 
 ### crear controlador
