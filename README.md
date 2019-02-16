@@ -11,7 +11,7 @@ composer create-project joalcapa/gauler
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
 migraciones, entre otras cosas
 
-###creando un modelo
+### crear modelo
 Para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
 puedes especificar los atributos del modelo
 ```
