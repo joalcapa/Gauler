@@ -122,3 +122,31 @@ class HeroesController extends Controller {
 
 Para que la busqueda del controlador asociado al modelo sea exitosa, el controlador debe tener concordancia con el nombre del modelo,
 ejemplo: para el modelo: HeroesModel, el controlador asociado es: HeroesController
+
+### crear migracion
+Para crear un archivo de migracion asociado a un modelo, gaulerium necesita el nombre del modelo, de manera opcional
+puedes especificar los atributos del modelo.
+```
+php gaulerium createMigration heroe [attr:TypeAttrQ::TYPE,....,attr:TypeAttrQ::TYPE]
+```
+
+El resultado es la creacion de una nueva clase en el directorio database/migrations del proyecto, notaras
+que en el nombre del archivo se antepone la fecha en la cual fue creada la migracion en el formato TimesTamp, esto es necesarios para que
+Gauler tenga un control de las migraciones realizadas.
+
+``` php
+<?php
+
+namespace Gauler\Database\Migrations;
+
+use Joalcapa\Elementary\Generics\TypeAttrQ as TypeAttrQ;
+use Joalcapa\Elementary\Migrations\BaseMigration as Migration;
+
+class HeroesMigration extends Migration {
+
+	public $attributes = [
+		'name' => TypeAttrQ::STRING,
+		'power' => TypeAttrQ::STRING,
+	];
+}
+```
