@@ -48,6 +48,19 @@ en plural como (nombre en singular)sModel, el nombre de la tabla asociada al mod
 si deseas eliminar esta convencion, puedes especificar directamente en el modelo, el nombre de la tabla a la 
 cual el modelo apunta.
 
+#### TypeAttrQ
+Gauler establece diferentes tipos de datos para los atributos de un modelo mediante la clase [TypeAttrQ](https://github.com/joalcapa/Elementary/blob/master/src/Generics/TypeAttrQ.php), entre los mas
+utilizados tenemos:
+
+``` php
+TypeAttrQ.STRING;
+TypeAttrQ.INTEGER;
+TypeAttrQ.DOUBLE;
+TypeAttrQ.CHAR;
+TypeAttrQ.BOOLEAN;
+TypeAttrQ.FLOAT;
+```
+
 ### crear controlador
 Por defecto Gauler ejecuta un proceso CRUD automatico cuando no existe un controlador asociado al modelo, 
 en caso de que desees añadir logica en algun proceso de operacion CRUD, puedes optar por la creacion de un 
