@@ -19,7 +19,6 @@
         "php": ">=7.0.0",
         "joalcapa/fundamentary": "^1.2.9",
         "symfony/console": "^4.2",
-        "joalcapa/elementary": "^0.0.1",
-        "joalcapa/origins": "^0.0.1"
+        "joalcapa/elementary": "^0.0.3"
     }
 }
