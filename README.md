@@ -12,7 +12,9 @@ Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controlad
 migraciones, entre otras cosas.
 
 ### crear modelo
-Para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
+Siendo Gauler una api REST, el modelo debe tener concordancia con el endpoint objetivo,
+uri: /heroes/{id}, modelo: HeroresModel, 
+para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
 puedes especificar los atributos del modelo.
 ```
 php gaulerium createModel heroe [attr:type,....,attr:type]
@@ -105,3 +107,6 @@ class HeroesController extends Controller {
 	}
 }
 ```
+
+Para que la busqueda del controlador asociado al modelo sea exitosa, el controlador debe tener concordancia con el nombre del modelo,
+modelo: HeroesModel, controlador: HeroesController
