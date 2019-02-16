@@ -42,7 +42,10 @@ class HeroesModel extends Model {
 ```
 
 ### crear controlador
-Para crear un controlador, gaulerium necesita el nombre del controlador asociado al modelo
+Por defecto Gauler ejecuta un proceso CRUD automatico cuando no existe un controlador asociado al modelo, 
+en caso de que desees añadir logica en algun proceso de operacion CRUD, puedes optar por la creacion de un 
+controlador, podras sobreescribir el metodo Rest que desees,
+para crear un controlador, gaulerium necesita el nombre del controlador asociado al modelo
 ```
 php gaulerium createController heroe
 ```
