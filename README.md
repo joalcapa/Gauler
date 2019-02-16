@@ -7,11 +7,11 @@ Api standar Rest --
 composer create-project joalcapa/gauler
 ```
 
-## Gaulerium CLI
+# Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
 migraciones, entre otras cosas.
 
-### crear modelo
+## crear modelo
 Siendo Gauler una api REST, el modelo debe tener concordancia con el endpoint objetivo, ejemplo: para el 
 uri: /heroes/{id} el modelo asociado es: HeroesModel, 
 para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
@@ -62,8 +62,8 @@ TypeAttrQ::FLOAT;
 
 #### creacion del modelo con su migracion
 Si el modelo se crea con sus atributos, Gauler creara el correspondiente archivo de migracion asociado al modelo. 
-
-### crear controlador
+       
+## crear controlador
 Por defecto Gauler ejecuta un proceso CRUD automatico cuando no existe un controlador asociado al modelo, 
 en caso de que desees añadir logica en algun proceso de operacion CRUD, puedes optar por la creacion de un 
 controlador, podras sobreescribir el metodo Rest que desees,
@@ -126,7 +126,7 @@ class HeroesController extends Controller {
 Para que la busqueda del controlador asociado al modelo sea exitosa, el controlador debe tener concordancia con el nombre del modelo,
 ejemplo: para el modelo: HeroesModel, el controlador asociado es: HeroesController
 
-### crear migracion
+## crear migracion
 Para crear un archivo de migracion asociado a un modelo, gaulerium necesita el nombre del modelo, de manera opcional
 puedes especificar los atributos del modelo.
 ```
