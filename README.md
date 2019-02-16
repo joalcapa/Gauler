@@ -60,21 +60,24 @@ class HeroesController extends Controller {
 	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
 	* @return  array
 	*/
-	public function index($request) {		}
+	public function index($request) {
+	}
 
 
 	/**
 	* @param  $id
 	* @return  array
 	*/
-	public function show($id) {		}
+	public function show($id) {		
+	}
 
 
 	/**
 	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
 	* @return  array
 	*/
-	public function store($request) {		}
+	public function store($request) {		
+	}
 
 
 	/**
@@ -82,13 +85,15 @@ class HeroesController extends Controller {
 	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
 	* @return  array
 	*/
-	public function update($id, $request) {		}
+	public function update($id, $request) {		
+	}
 
 
 	/**
 	* @param  $id
 	* @return  array
 	*/
-	public function destroy($id) {		}
+	public function destroy($id) {		
+	}
 }
 ```
