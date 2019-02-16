@@ -56,7 +56,6 @@ utilizados tenemos:
 TypeAttrQ.STRING;
 TypeAttrQ.INTEGER;
 TypeAttrQ.DOUBLE;
-TypeAttrQ.CHAR;
 TypeAttrQ.BOOLEAN;
 TypeAttrQ.FLOAT;
 ```
