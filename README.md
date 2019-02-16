@@ -9,16 +9,16 @@ composer create-project joalcapa/gauler
 
 ## Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
-migraciones, entre otras cosas
+migraciones, entre otras cosas.
 
 ### crear modelo
 Para crear un modelo, gaulerium necesita el nombre del modelo, de manera opcional
-puedes especificar los atributos del modelo
+puedes especificar los atributos del modelo.
 ```
 php gaulerium createModel heroe [attr:type,....,attr:type]
 ```
 
-El resultado es la creacion de una nueva clase en el directorio api/models del proyecto
+El resultado es la creacion de una nueva clase en el directorio api/models del proyecto.
 
 ``` php
 <?php
@@ -41,16 +41,21 @@ class HeroesModel extends Model {
 }
 ```
 
+El comando createModel recibe el nombre del modelo en singular, estableciendo la creacion del modelo
+en plural como (nombre en singular)sModel, el nombre de la tabla asociada al modelo tambien debe estar en plural,
+si deseas eliminar esta convencion, puedes especificar directamente en el modelo, el nombre de la tabla a la 
+cual el modelo apunta.
+
 ### crear controlador
 Por defecto Gauler ejecuta un proceso CRUD automatico cuando no existe un controlador asociado al modelo, 
 en caso de que desees añadir logica en algun proceso de operacion CRUD, puedes optar por la creacion de un 
 controlador, podras sobreescribir el metodo Rest que desees,
-para crear un controlador, gaulerium necesita el nombre del controlador asociado al modelo
+para crear un controlador, gaulerium necesita el nombre del controlador asociado al modelo.
 ```
 php gaulerium createController heroe
 ```
 
-El resultado es la creacion de una nueva clase en el directorio api/controllers del proyecto
+El resultado es la creacion de una nueva clase en el directorio api/controllers del proyecto.
 
 ``` php
 <?php
