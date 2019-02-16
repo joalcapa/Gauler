@@ -2,9 +2,9 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-require_once('./Vendor/Joalcapa/elementary/src/App/Application.php');
 
-$app = new \Joalcapa\Elementary\App\Application();
+
+$app = new Joalcapa\Elementary\App\Application();
 
 $app->init();
 
