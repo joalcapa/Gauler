@@ -293,6 +293,7 @@ public function store($request) {
   $heroe->name = $request->name;
   $heroe->powerType = $request->powerType;
   $heroe->save();
+  return $heroe;
 }
 .....
 ```
