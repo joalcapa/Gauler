@@ -345,11 +345,11 @@ Gauler establece diferentes tipos de datos para los atributos de un modelo media
 utilizados tenemos:
 
 ``` php
-TypeAttrQ::STRING;   (string)
-TypeAttrQ::INTEGER;  (integer)
-TypeAttrQ::DOUBLE;   (double)
-TypeAttrQ::BOOLEAN;  (boolean)
-TypeAttrQ::FLOAT;    (float)
+TypeAttrQ::STRING;   // string
+TypeAttrQ::INTEGER;  // integer
+TypeAttrQ::DOUBLE;   // double
+TypeAttrQ::BOOLEAN;  // boolean
+TypeAttrQ::FLOAT;    // float
 ```
 
 #### creacion del modelo con su migracion
