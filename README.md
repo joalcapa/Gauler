@@ -37,12 +37,108 @@ una funcion anonima, el cual recibe el objeto request de la solicitud.
 
 Rest::Model('heroes', function($request) {
   // codigo
+  // killer('401');
   return $request;
 });
 
 ```
 
-Recuerde retornar el objeto request si desea continuar con la ejecucion de la logica del modelo.
+Recuerde retornar el objeto request si desea continuar con la ejecucion de la logica del modelo, de lo contrario 
+podra utilizar el metodo killer para abortar la operacion con el codigo http que considere conveniente.  
+
+# Controlador del modelo 
+Los controladores del modelo se conocen como controladores restFull, puesto que ejecutan la logica correspondiente
+a la operacion CRUD del modelo, la estructura basica de un controlador RestFull asociado al model es la siguiente:
+
+``` php
+// api/controllers/HeroesController.php
+<?php
+
+namespace Gauler\Api\Controllers;
+
+class HeroesController extends Controller {
+
+	public function index($request) {		
+	}
+
+	public function show($id) {		
+	}
+	
+	public function store($request) {		
+	}
+	
+	public function update($id, $request) {		
+	}
+	
+	public function destroy($id) {		
+	}
+}
+```
+
+Puede ver que los metodos corresponden a las operaciones CRUD, Gauler ubica a los controladores en el directorio 
+api/controllers/
+
+Una vez declarado el modelo mediante el metodo Rest, Gauler le ofrece la posibilidad de crear un CRUD automatico al no declarar el 
+metodo RestFull en el controlador correspondiente al modelo.
+
+### creando un nuevo heroe
+Suponga que tiene el modelo HeroesModel y ademas ha habilitado su acceso mediante el metodo Rest, al momento
+de crear un nuevo heroe puede verse en el alguno de los siguiente casos:
+
+#### 1. No tiene un controlador asignado al modelo en el directorio api/controllers
+En este caso Gauler ejecutara la operacion CREATE de manera automatica, verificando la existencia
+de los atributos necesarios para crear el nuevo heroe en el cuerpo de la solicitud HTTP.
+
+Los atributos asignados al modelo HeroesModel son, name y powerType.
+
+``` php
+// api/models/HeroesModel.php
+.....
+protected $tuples = [
+		'name',
+		'powerType',
+	];
+.....
+```
+
+Mediante la uri heroes/ y teniendo como cuerpo de la solicitud la siguiente estructura:
+``` json
+{
+   "name": "name of new heroe",
+   "powerType": "run really fast"
+}
+```
+
+El resultado de la peticion POST CREATE, sera el siguiente json:
+``` json
+{
+    "message": "OK",
+    "data": {
+        "id": "1",
+        "name": "name of new heroe",
+        "powerType": "run really fast"
+    }
+}
+```
+
+De esta manera el heroe de nombre "name of new heroe", ha sido creado e insertado en la tabla heroes 
+de la base de datos objetivo.
+
+#### 2. No tiene declarado el metodo restFull "store" en su controlador
+En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
+
+#### 3. Si tiene declarado el metodo restFull "store" en su controlador
+Al contar con el metodo restFull "store" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
+metodo, note que el metodo "store" recibe el objeto request con los datos de la solicitud http.
+
+``` php
+// api/controllers/HeroesController.php
+.....
+public function store($request) {		
+  // code
+}
+.....
+```
 
 # Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
