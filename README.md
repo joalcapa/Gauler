@@ -15,30 +15,30 @@ Asier Marqués describe todas las caracteristicas escenciales para una arquitect
 Son muy sencillos de explicar, basicamente es una convencion de nombres para ejecutar una determinada logica rest,
 estan establecidos para ser ejecutados por medio de una URI y un metodo especifico:
 
-1. Index: 
-   Metodo:      GET
-   URI:         /resources
-   Accion:      Listar recursos
+##### 1. Index:  
+   Metodo:      GET  
+   URI:         /resources  
+   Accion:      Listar recursos  
    
-2. Show:
-   Metodo:      GET
-   URI:         /resources/{id}
-   Accion:      Obtener el recurso mediante un id especifico
+##### 2. Show:  
+   Metodo:      GET  
+   URI:         /resources/{id}  
+   Accion:      Obtener el recurso mediante un id especifico  
    
-3. Store:
-   Metodo:      POST
-   URI:         /resources
-   Accion:      Crear un nuevo recurso
+##### 3. Store:  
+   Metodo:      POST  
+   URI:         /resources  
+   Accion:      Crear un nuevo recurso  
    
-4. Update:   
-   Metodo:      PUT
-   URI:         /resources/{id}
-   Accion:      Actualizar el recurso mediante un id especifico
+##### 4. Update:   
+   Metodo:      PUT  
+   URI:         /resources/{id}  
+   Accion:      Actualizar el recurso mediante un id especifico  
    
-5. Delete:
-   Metodo:      DELETE
-   URI:         /resources/{id}
-   Accion:      Eliminar el recurso mediante un id especifico
+##### 5. Delete:  
+   Metodo:      DELETE  
+   URI:         /resources/{id}  
+   Accion:      Eliminar el recurso mediante un id especifico  
 
 ### Creando proyecto Gauler
 
