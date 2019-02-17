@@ -104,6 +104,28 @@ momento de retornar una instancia del modelo, muy util para ocultar la contraseÃ
 
 NOTA: Puedes crear un modelo utilizando la interfaz de linea de comandos de nombre "gaulerium".
 
+### instanciar modelos
+Para instanciar un objeto de un modelo y persistir su informacion en la base de datos, se 
+realiza de la siguiente manera:
+
+``` php
+
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$heroe = new Heroes();
+$heroe->name = 'Ironman';
+$heroe->powerType = 'Conocimiento';
+$heroe->save();
+```
+
+Como puedes observar el metodo save() realiza la persistencia en la base de datos, inmediatamente el objeto $heroe instanciado
+recibe el id de su registro en la base de datos, por lo cual puedes acceder a su propiedad id, justo despues de la llamada
+al metodo save().
+
+``` php
+$heroe->id;
+```
+
 # Rutas del modelo 
 Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
 caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ para ejecutar cualquier
