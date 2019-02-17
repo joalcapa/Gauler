@@ -126,6 +126,18 @@ al metodo save().
 $heroe->id;
 ```
 
+Otra forma de instanciar y persistir el modelo en la base de datos al mismo tiempo.
+
+``` php
+
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$heroe = new Heroes($request);
+```
+
+De esta manera se consigue el mismo resultado que el metodo save(), devolviendo el objeto que se 
+ha persistido en la base de datos.
+
 ### obtener modelos desde la base de datos
 Existen diversas formas de obtener modelos directamente de la base de datos
 
@@ -321,11 +333,8 @@ metodo, note que el metodo "store" recibe el objeto request con los datos de la 
 ``` php
 // api/controllers/HeroesController.php
 .....
-public function store($request) {		
-  $heroe = new Heroes();
-  $heroe->name = $request->name;
-  $heroe->powerType = $request->powerType;
-  $heroe->save();
+public function store($request) {	
+  $heroe = new Heroe($request);
   return $heroe;
 }
 .....
