@@ -123,7 +123,8 @@ El resultado de la peticion POST CREATE, sera el siguiente json:
 ```
 
 De esta manera el heroe de nombre "name of new heroe", ha sido creado e insertado en la tabla heroes 
-de la base de datos objetivo.
+de la base de datos objetivo, para realizar este ejemplo practico recomiendo el uso de [Postman](https://www.getpostman.com/), herramienta
+muy practica para trabajar con apis.
 
 #### 2. No tiene declarado el metodo restFull "store" en su controlador
 En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
