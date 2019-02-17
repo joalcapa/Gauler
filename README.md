@@ -40,9 +40,6 @@ estan establecidos para ser ejecutados por medio de una URI y un metodo especifi
    URI:         /resources/{id}  
    Accion:      Eliminar el recurso mediante un id especifico  
   
-  
-  
-  
 ## Que es Gauler?
 Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar operaciones CRUD a determinados modelos, 
 mediante la ejecucion de logica escrita en los metodos RestFull establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
@@ -53,6 +50,27 @@ no existen vistas ya que se trata de una api RestFull.
 ```
 composer create-project joalcapa/gauler
 ```
+
+# Que vuelvan los HEROES
+Hace ya algunos años cuando comence a documentarme con Angular, me parecio muy peculiar que el equipo de Angular utilizara
+el concepto de "heroes" para explicar el funcionamiento de su plataforma, debo aceptar que al igual que a muchos, el cambio de la 
+version 1 a la version 2 de Angular fue muy abrumador, despues de todo TypeScript es un superconjunto de javascript que resuelve 
+muchos problemas, siendo el mas importante el tipado. Pero muy abrumador, si te gusta Java, TypeScript es para ti.
+
+Los "heroes" llegaron para explicar el funcionamiento de una plataforma que prometia mucho en ese entonces, ahora bien, admitamos que ReactJs
+hace las cosas mas simples que Angular y su comunidad ha lanzado potentes herramientas como Redux, siendo Redux una herramienta que no 
+depende del framework o biblioteca, es el estandarte de ReactJs, por que si quieres desarrollar en ReactJs o incluso en React-Native, debes saber Redux.
+
+Para este proposito de explicar Gauler, intentare utilizar el concepto de "heroes".
+
+# Vamos a crear el modelo de un heroe
+Si vienes trabajando en el lado del back-end, 
+habras notado que la mayoria de los frameworks como Laravel, Yii2, Symfony, LoopBack entre otros,
+utilizan el patron del modelo para asignar todos los atributos de 
+una tabla o coleccion de una base de datos en una clase, cuya instancia sea
+una fila o documento de la base de datos.  
+  
+Gauler utiliza el mismo patron para llevar a cabo la logica de negocios en la base de datos, asi que vamos a crear el modelo "heroes".
 
 # Rutas del modelo 
 Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
