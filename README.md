@@ -158,6 +158,39 @@ $filters = [
 ];
 $heroes = Heroes::where($filters);
 ```
+### actualizar un modelo en la base de datos mediante el id
+Para actualizar un registro en la base de datos, se requiere el id, pero existen dos formas de hacerlo:
+
+#### 1. metodo update
+Este metodo requiere ser llamado desde una instancia donde previamente se ha actualizado en memoria sus atributos
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$heroe = Heroes::find($request->id);
+
+foreach($heroe->getTuples() as $tuple)
+   if(!empty($request->$tuple))
+       $heroe->$tuple = $request->$tuple;
+
+$heroe->update();
+```
+
+#### 2. metodo updateRequest
+Este metodo encapsula el metodo update y retorna la instancia del modelo actualizado
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$heroe = Heroes::updateRequest($request);
+```
+
+### eliminar un modelo en la base de datos mediante el id
+Para eliminar un registro en la base de datos, se requiere el id
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+Heroes::destroy($id);
+```
 
 # Rutas del modelo 
 Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
