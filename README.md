@@ -130,7 +130,7 @@ $heroe->id;
 Existen diversas formas de obtener modelos directamente de la base de datos
 
 #### 1. Obtener todos los heroes
-Con el metodo all(), se pueden obtener todos los registros de la tabla
+Con el metodo all(), se obtienen todos los registros de la tabla
 
 ``` php
 use Gauler\Api\Models\HeroesModel as Heroes;
@@ -139,7 +139,7 @@ $heroes = Heroes::all();
 ```
 
 #### 2. Obtener un heroe mediante un id
-Con el metodo find($id), se pueden obtener el registro de la tabla asociado a un id especifico
+Con el metodo find($id), se obtiene el registro de la tabla asociado a un id especifico
 
 ``` php
 use Gauler\Api\Models\HeroesModel as Heroes;
@@ -148,7 +148,7 @@ $heroe = Heroes::find($id);
 ```
 
 #### 3. Obtener un conjunto de heroes mediante filtros
-Con el metodo where($filters), se pueden obtener los registros de la tabla que cumplan con un criterio de filtros
+Con el metodo where($filters), se obtienen los registros de la tabla que cumplan con un criterio de filtros
 
 ``` php
 use Gauler\Api\Models\HeroesModel as Heroes;
