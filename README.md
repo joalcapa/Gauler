@@ -169,7 +169,7 @@ namespace Gauler\Database\Migrations;
 use Joalcapa\Elementary\Generics\TypeAttrQ as TypeAttrQ;
 use Joalcapa\Elementary\Migrations\BaseMigration as Migration;
 
-class HeroesMigration extends Migration {
+class 1550349238HeroesMigration extends Migration {
 
 	public $attributes = [
 		'name' => TypeAttrQ::STRING,
