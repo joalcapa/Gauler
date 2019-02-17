@@ -183,8 +183,8 @@ use Gauler\Api\Models\HeroesModel as Heroes;
 $heroe = Heroes::updateRequest($request);
 ```
 
-### eliminar un modelo en la base de datos mediante el id
-Para eliminar un registro en la base de datos, se requiere el id
+### eliminar fisicamente un modelo en la base de datos mediante el id
+Para eliminar fisicamente un registro en la base de datos, se requiere el id
 
 ``` php
 use Gauler\Api\Models\HeroesModel as Heroes;
