@@ -161,7 +161,7 @@ Gauler tenga un control de las migraciones realizadas.
 ```
 
 ``` php
-// database/migrations/HeroesMigration.php
+// database/migrations/1550349238HeroesMigration.php
 <?php
 
 namespace Gauler\Database\Migrations;
@@ -169,7 +169,7 @@ namespace Gauler\Database\Migrations;
 use Joalcapa\Elementary\Generics\TypeAttrQ as TypeAttrQ;
 use Joalcapa\Elementary\Migrations\BaseMigration as Migration;
 
-class 1550349238HeroesMigration extends Migration {
+class HeroesMigration extends Migration {
 
 	public $attributes = [
 		'name' => TypeAttrQ::STRING,
