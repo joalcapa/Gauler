@@ -13,9 +13,6 @@ caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ p
 operacion CRUD, solo basta con agregarlo al metodo Rest de la siguiente manera:
 
 `` php
-
-// routes/rest.php
-
 <?php
 
 Rest::Model('heroes');
