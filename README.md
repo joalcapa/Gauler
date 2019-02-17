@@ -225,7 +225,7 @@ en caso de no estar declarado el modelo en el metodo Rest, Gauler arrojara el co
 
 ### middleware del modelo
 Los middlewares son funciones que deben ejecutarse antes de la ejecucion de la logica del modelo,
-en primera instancia, Gauler ejecuta el middleware de autenticacion antes de buscar el modelo mediante el metodo Rest,
+en primera instancia Gauler ejecuta el middleware de autenticacion antes de buscar el modelo mediante el metodo Rest,
 de esta manera se concede o niega el acceso al modelo en caso de no estar autenticado,
 si consideras necesario utilizar otro middleware para un determinado modelo, el metodo Rest recibe como segundo parametro
 una funcion anonima, el cual recibe el objeto request de la solicitud.
