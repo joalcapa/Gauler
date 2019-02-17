@@ -1,5 +1,44 @@
 # Gauler
-Api standar Rest --
+Api standar RestFull
+
+## Hablemos un poco de las apis RestFull
+Existen diversos servicios web como lo son SOAP, GraphQL entre otros.
+Pero REST es el servicio web popular por excelencia, muchos sistemas y frameworks trabajan bajo esta arquitectura, aproximadamente en el 
+año 2000, Roy Fielding propone este nuevo servicio web.
+
+Las caracteristicas son muchas y existen muchos foros y blogs donde se habla al respecto, la primera fuente a consultar 
+es la misma de Roy Fielding, en su [trabajo](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) acerca de Rest,
+algo mas ligero y rapido lo puedes encontrar en el siguiente [articulo](http://asiermarques.com/2013/conceptos-sobre-apis-rest/), en este articulo
+Asier Marqués describe todas las caracteristicas escenciales para una arquitectura REST.
+
+#### Metodos RestFull
+Son muy sencillos de explicar, basicamente es una convencion de nombres para ejecutar una determinada logica rest,
+estan establecidos para ser ejecutados por medio de una URI y un metodo especifico:
+
+1. Index: 
+   Metodo:      GET
+   URI:         /resources
+   Accion:      Listar recursos
+   
+2. Show:
+   Metodo:      GET
+   URI:         /resources/{id}
+   Accion:      Obtener el recurso mediante un id especifico
+   
+3. Store:
+   Metodo:      POST
+   URI:         /resources
+   Accion:      Crear un nuevo recurso
+   
+4. Update:   
+   Metodo:      PUT
+   URI:         /resources/{id}
+   Accion:      Actualizar el recurso mediante un id especifico
+   
+5. Delete:
+   Metodo:      DELETE
+   URI:         /resources/{id}
+   Accion:      Eliminar el recurso mediante un id especifico
 
 ### Creando proyecto Gauler
 
