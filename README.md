@@ -7,6 +7,23 @@ Api standar Rest --
 composer create-project joalcapa/gauler
 ```
 
+# Rutas del modelo 
+Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
+caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ para ejecutar cualquier
+operacion CRUD, solo basta con agregarlo al metodo Rest de la siguiente manera:
+
+`` php
+// routes/rest.php
+<?php
+
+Rest::Model('heroes');
+
+```
+
+De esta manera, al recibir Gauler una solicitud cuya uri este compuesta por el prefijo 
+heroes/, se iniciara una busqueda del modelo por medio del metodo Rest, y ejecutara la logica correspondiente,
+en caso de no estar declarado el modelo en el metodo Rest, Gauler arrojara el codigo http 404 de recurso no encontrado.
+
 # Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
 migraciones, entre otras cosas.
@@ -23,6 +40,7 @@ php gaulerium createModel heroe [attr:TypeAttrQ::TYPE,....,attr:TypeAttrQ::TYPE]
 El resultado es la creacion de una nueva clase en el directorio api/models del proyecto.
 
 ``` php
+// api/models/HeroesModel.php
 <?php
 
 namespace Gauler\Api\Models;
@@ -75,6 +93,7 @@ php gaulerium createController heroe
 El resultado es la creacion de una nueva clase en el directorio api/controllers del proyecto.
 
 ``` php
+// api/controllers/HeroesController.php
 <?php
 
 namespace Gauler\Api\Controllers;
@@ -142,6 +161,7 @@ Gauler tenga un control de las migraciones realizadas.
 ```
 
 ``` php
+// database/migrations/HeroesMigration.php
 <?php
 
 namespace Gauler\Database\Migrations;
