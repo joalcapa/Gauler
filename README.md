@@ -24,6 +24,26 @@ De esta manera, al recibir Gauler una solicitud cuya uri este compuesta por el p
 heroes/, se iniciara una busqueda del modelo por medio del metodo Rest, y ejecutara la logica correspondiente,
 en caso de no estar declarado el modelo en el metodo Rest, Gauler arrojara el codigo http 404 de recurso no encontrado.
 
+### middleware del modelo
+Los middlewares son funciones que deben ejecutarse antes de la ejecucion de la logica del modelo,
+en primera instancia, Gauler ejecuta el middleware de autenticacion antes de buscar el modelo mediante el metodo Rest,
+de esta manera se concede o niega el acceso al modelo en caso de no estar autenticado,
+si consideras necesario utilizar otro middleware para un determinado modelo, el metodo Rest recibe como segundo parametro
+una funcion anonima, el cual recibe el objeto request de la solicitud.
+
+``` php
+// routes/rest.php
+<?php
+
+Rest::Model('heroes', function($request) {
+  // codigo
+  return $request;
+});
+
+```
+
+Recuerde retornar el objeto request si desea continuar con la ejecucion de la logica del modelo.
+
 # Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
 migraciones, entre otras cosas.
