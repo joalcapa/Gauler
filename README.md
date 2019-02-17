@@ -207,7 +207,7 @@ Heroes::destroy($id);
 ```
 
 # Rutas del modelo 
-Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
+Gauler establece un criterio para habilitar el acceso a un determinado modelo, en el 
 caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ para ejecutar cualquier
 operacion CRUD, solo basta con agregarlo al metodo Rest de la siguiente manera:
 
