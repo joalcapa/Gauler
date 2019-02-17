@@ -126,7 +126,8 @@ al metodo save().
 $heroe->id;
 ```
 
-Otra forma de instanciar y persistir el modelo en la base de datos al mismo tiempo.
+Otra forma de instanciar y persistir el modelo en la base de datos al mismo tiempo, consiste en 
+pasar como argumento el objeto request al constructor de la clase.
 
 ``` php
 
