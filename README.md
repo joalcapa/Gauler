@@ -39,6 +39,14 @@ estan establecidos para ser ejecutados por medio de una URI y un metodo especifi
    Metodo:      DELETE  
    URI:         /resources/{id}  
    Accion:      Eliminar el recurso mediante un id especifico  
+  
+  
+  
+  
+## Que es Gauler?
+Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar operaciones CRUD a determinados modelos, 
+mediante la ejecucion de logica escrita en los metodos RestFull establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
+no existen vistas ya que se trata de una api RestFull.
 
 ### Creando proyecto Gauler
 
