@@ -72,6 +72,38 @@ una fila o documento de la base de datos.
   
 Gauler utiliza el mismo patron para llevar a cabo la logica de negocios en la base de datos, asi que vamos a crear el modelo "heroes".
 
+Un modelo es una clase que representa una tabla o colleccion de una base de datos, puedes crear una clase con la siguiente estructura en el 
+directorio api/models:
+
+``` php
+// api/models/HeroesModel.php
+<?php
+
+namespace Gauler\Api\Models;
+
+use Joalcapa\Fundamentary\App\Models\BaseModel as Model;
+
+class HeroesModel extends Model {
+
+	public static $model = 'Heroes';
+
+	protected $tuples = [
+		'name',
+		'powerType',
+	];
+
+	protected $hidden_tuples = [
+	];
+}
+```
+
+La clase consta de una propiedad de nombre model, que es el nombre de la tabla a la cual se hace 
+referencia, ademas de una propiedad de nombre tuples, que especifica los campos de la tabla y por ultimo 
+la propiedad hidden_tuples, la cual es utilizada por Gauler para ocultar los campos de la tabla al 
+momento de retornar una instancia del modelo, muy util para ocultar la contraseña de un modelo user.
+
+NOTA: Puedes crear un modelo utilizando la interfaz de linea de comandos de nombre "gaulerium".
+
 # Rutas del modelo 
 Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
 caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ para ejecutar cualquier
