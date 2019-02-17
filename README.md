@@ -289,7 +289,10 @@ metodo, note que el metodo "store" recibe el objeto request con los datos de la 
 // api/controllers/HeroesController.php
 .....
 public function store($request) {		
-  // code
+  $heroe = new Heroes();
+  $heroe->name = $request->name;
+  $heroe->powerType = $request->powerType;
+  $heroe->save();
 }
 .....
 ```
