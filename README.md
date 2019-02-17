@@ -134,6 +134,7 @@ pasar como argumento el objeto request al constructor de la clase.
 use Gauler\Api\Models\HeroesModel as Heroes;
 
 $heroe = new Heroes($request);
+$heroe->id;
 ```
 
 De esta manera se consigue el mismo resultado que el metodo save(), devolviendo el objeto que se 
