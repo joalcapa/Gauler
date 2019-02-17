@@ -126,6 +126,39 @@ al metodo save().
 $heroe->id;
 ```
 
+### obtener modelos desde la base de datos
+Existen diversas formas de obtener modelos directamente de la base de datos
+
+#### 1. Obtener todos los heroes
+Con el metodo all(), se pueden obtener todos los registros de la tabla
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$heroes = Heroes::all();
+```
+
+#### 2. Obtener un heroe mediante un id
+Con el metodo find($id), se pueden obtener el registro de la tabla asociado a un id especifico
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$heroe = Heroes::find($id);
+```
+
+#### 3. Obtener un conjunto de heroes mediante filtros
+Con el metodo where($filters), se pueden obtener los registros de la tabla que cumplan con un criterio de filtros
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$filters = [
+   Heroes::EQUALS('powerType', 'run fast')
+];
+$heroes = Heroes::where($filters);
+```
+
 # Rutas del modelo 
 Gauler establece un criterio para habilitar o no el acceso a un determinado modelo, en el 
 caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ para ejecutar cualquier
