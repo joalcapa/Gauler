@@ -12,7 +12,8 @@ Gauler establece un criterio para habilitar o no el acceso a un determinado mode
 caso de que desees que el modelo heroes sea alcanzable por el endpoint heroes/ para ejecutar cualquier
 operacion CRUD, solo basta con agregarlo al metodo Rest de la siguiente manera:
 
-`` php
+``` php
+// routes/rest.php
 <?php
 
 Rest::Model('heroes');
