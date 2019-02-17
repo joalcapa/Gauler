@@ -47,8 +47,9 @@ Recuerde retornar el objeto request si desea continuar con la ejecucion de la lo
 podra utilizar el metodo killer para abortar la operacion con el codigo http que considere conveniente.  
 
 # Controlador del modelo 
-Los controladores del modelo se conocen como controladores restFull, puesto que ejecutan la logica correspondiente
-a la operacion CRUD del modelo, la estructura basica de un controlador RestFull asociado al model es la siguiente:
+Los controladores del modelo se conocen como controladores RestFull, puesto que ejecutan la logica correspondiente
+a la operacion CRUD del modelo, para crear un controlador puede hacer uso de "Gaulerium", la interfaz de linea de comandos que Gauler
+posee para facilitar este trabajo, la estructura basica de un controlador RestFull asociado al modelo es la siguiente:
 
 ``` php
 // api/controllers/HeroesController.php
@@ -78,16 +79,16 @@ class HeroesController extends Controller {
 Puede ver que los metodos corresponden a las operaciones CRUD, Gauler ubica a los controladores en el directorio 
 api/controllers/
 
-Una vez declarado el modelo mediante el metodo Rest, Gauler le ofrece la posibilidad de crear un CRUD automatico al no declarar el 
+Una vez declarado el modelo mediante el metodo Rest, Gauler le ofrece la posibilidad de ejecutar un CRUD automatico al no declarar el 
 metodo RestFull en el controlador correspondiente al modelo.
 
 ### creando un nuevo heroe
 Suponga que tiene el modelo HeroesModel y ademas ha habilitado su acceso mediante el metodo Rest, al momento
-de crear un nuevo heroe puede verse en el alguno de los siguiente casos:
+de crear un nuevo heroe puede verse en alguno de los siguiente casos:
 
 #### 1. No tiene un controlador asignado al modelo en el directorio api/controllers
 En este caso Gauler ejecutara la operacion CREATE de manera automatica, verificando la existencia
-de los atributos necesarios para crear el nuevo heroe en el cuerpo de la solicitud HTTP.
+de los atributos necesarios para crear al nuevo heroe en el cuerpo de la solicitud HTTP.
 
 Los atributos asignados al modelo HeroesModel son, name y powerType.
 
