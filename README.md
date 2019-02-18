@@ -507,7 +507,7 @@ php gaulerium migrate [nameModel]
 
 ## Seeders
 Gaulerium ofrece un mecanismo para sembrar datos falsos en la base de datos objetivo, puedes 
-crear un nuevo arhivo seeder mediante el siguiente comando:
+crear un nuevo archivo seeder mediante el siguiente comando:
 
 ```
 php gaulerium createSeeder heroe
