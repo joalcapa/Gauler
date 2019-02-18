@@ -504,3 +504,35 @@ migracion de un solo modelo en la base de datos.
 ```
 php gaulerium migrate [nameModel]
 ```
+
+## Seeders
+Gaulerium ofrece un mecanismo para sembrar datos falsos en la base de datos objetivo, puedes 
+crear un nuevo arhivo seeder mediante el siguiente comando:
+
+```
+php gaulerium createSeeder heroe
+```
+
+El resultado es una nueva clase seeder en el directorio seeders/
+
+``` php
+// seeders/HeroesSeeder.php
+<?php
+
+namespace Gauler\Seeders;
+
+class HeroesSeeder {
+
+    public function boom() {
+    }
+}
+```
+
+La clase seeder resultante posee un solo metodo (boom) con el cual puedes instanciar los modelos con informacion falsa 
+que desees, para posteriormente sembrarlos en la base de datos mediante el siguiente comando:
+
+```
+php gaulerium seeder [nameModel]
+```
+
+Al igual que el comando migrate, este comando puede ejecutar un solo seeder si lo desea, pasando como argumento el nombre.
