@@ -532,7 +532,7 @@ La clase seeder resultante posee un solo metodo (boom) con el cual puedes instan
 que desees, para posteriormente sembrarlos en la base de datos mediante el siguiente comando:
 
 ```
-php gaulerium seeder [nameModel]
+php gaulerium seeder [nameSeeder]
 ```
 
 Al igual que el comando migrate, este comando puede ejecutar un solo seeder si lo desea, pasando como argumento el nombre.
