@@ -342,6 +342,70 @@ public function store($request) {
 .....
 ```
 
+# Autenticacion
+Gauler se reserva el mecanismo de autenticacion de usuario, para efectos de demostracion considere el usuario con datos falsos que se encuentra en 
+el archivo UsersSeeder.php alojado en el directorio seeders/
+
+``` php
+// seeders/UsersSeeder.php
+<?php
+
+namespace Gauler\Seeders;
+
+use Gauler\api\models\UsersModel as Users;
+
+class UsersSeeder {
+
+    public function boom() {
+        $user = new Users();
+        $user->name = 'admin';
+        $user->email = 'admin@admin.com';
+        $user->password = hashBCrypt('123456789Password');
+        $user->save();
+    }
+}
+```
+
+Mediante el comando
+
+```
+php gaulerium seeder UsersSeeder
+```
+
+Podra facilmente sembrar los datos del nuevo usuario en la base de datos, Gauler ha reservado
+la URL /api/auth para realizar la autenticacion de usuario, el endpoint /auth requiere la siguiente informacion:
+
+``` json
+// Metodo POST
+// Body en json
+{
+	"email": "admin@admin.com",
+	"password": "123456789Password"
+}
+``` 
+
+Dara como respuesta el siguiente JSON:
+
+``` json
+{
+    "message": "OK",
+    "data": {
+        "user": {
+            "name": "admin",
+            "email": "admin@admin.com"
+        },
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTA0NTQ0ODMsImV4cCI6MTU1MDQ1ODA4MywiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiNCIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkUWZKeU9neDZ1eVkwdThTcllmb05vT1psMjJMeEFFUTdWa093eXJoQ3pYUU56Y0FHYXhpZVMifX19.LGKHlOwew_c_ibztsKOC5lIA5EhADz8-kvXJ7lml7nE"
+    }
+}
+``` 
+
+Como puede observar Gauler retorna el token de autorizacion con el cual podra consumir todos los endpoints de la api
+estableciendo la cabecera de Authorization de la siguiente manera:
+
+``` 
+Authorization: Bearer $token
+``` 
+
 # Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
 migraciones, entre otras cosas.
