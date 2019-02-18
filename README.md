@@ -415,7 +415,7 @@ generando de esa manera un nuevo token de acceso.
 // Body en json
 {
 	"email": "admin@admin.com",
-	"password": "123456789Password"
+	"password": "123456789Password",
 	"newPassword": "newPassword"
 }
 ``` 
