@@ -406,6 +406,35 @@ estableciendo la cabecera de Authorization de la siguiente manera:
 Authorization: Bearer $token
 ``` 
 
+## Cambiar contraseña
+Gauler ha reservado la URL /api/auth/reset-password para el mecanismo de cambio de contraseña por el metodo POST, 
+generando de esa manera un nuevo token de acceso.
+
+``` json
+// Metodo POST
+// Body en json
+{
+	"email": "admin@admin.com",
+	"password": "123456789Password"
+	"newPassword": "newPassword"
+}
+``` 
+
+Dara como respuesta el siguiente JSON:
+
+``` json
+{
+    "message": "OK",
+    "data": {
+        "user": {
+            "name": "admin",
+            "email": "admin@admin.com"
+        },
+        "token": "eyJ0reWeXAiOiJKV1QiLCJhbGciOi..."
+    }
+}
+```   
+
 # Gaulerium CLI
 Gaulerium es una interfaz de linea de comandos capaz de crear modelos, controladores,
 migraciones, entre otras cosas.
