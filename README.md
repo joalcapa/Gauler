@@ -1,7 +1,7 @@
 # Gauler
-Api standar RestFull by Jose Caceres
+Api standar RestFul by Jose Caceres
 
-## Hablemos un poco de las apis RestFull
+## Hablemos un poco de las apis RestFul
 Existen diversos servicios web como lo son SOAP, GraphQL entre otros.
 Pero REST es el servicio web popular por excelencia, muchos sistemas y frameworks trabajan bajo esta arquitectura, aproximadamente en el 
 año 2000, Roy Fielding propone este nuevo servicio web.
@@ -11,7 +11,7 @@ es la misma de Roy Fielding, en su [trabajo](https://www.ics.uci.edu/~fielding/p
 algo mas ligero y rapido lo puedes encontrar en el siguiente [articulo](http://asiermarques.com/2013/conceptos-sobre-apis-rest/), en este articulo
 Asier Marqués describe todas las caracteristicas escenciales para una arquitectura REST.
 
-#### Metodos RestFull
+#### Metodos RestFul
 Son muy sencillos de explicar, basicamente es una convencion de nombres para ejecutar una determinada logica rest,
 estan establecidos para ser ejecutados por medio de una URI y un metodo especifico:
 
@@ -42,8 +42,8 @@ estan establecidos para ser ejecutados por medio de una URI y un metodo especifi
   
 ## Que es Gauler?
 Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar operaciones CRUD a determinados modelos, 
-mediante la ejecucion de logica escrita en los metodos RestFull establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
-no existen vistas ya que se trata de una api RestFull.
+mediante la ejecucion de logica escrita en los metodos RestFul establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
+no existen vistas ya que se trata de una api RestFul.
 
 ### Creando proyecto Gauler
 
@@ -246,9 +246,9 @@ Recuerde retornar el objeto request si desea continuar con la ejecucion de la lo
 podra utilizar el metodo killer para abortar la operacion con el codigo http que considere conveniente.  
 
 # Controlador del modelo 
-Los controladores del modelo se conocen como controladores RestFull, puesto que ejecutan la logica correspondiente
+Los controladores del modelo se conocen como controladores RestFul, puesto que ejecutan la logica correspondiente
 a la operacion CRUD del modelo, para crear un controlador puede hacer uso de "Gaulerium", la interfaz de linea de comandos que Gauler
-posee para facilitar este trabajo, la estructura basica de un controlador RestFull asociado al modelo es la siguiente:
+posee para facilitar este trabajo, la estructura basica de un controlador RestFul asociado al modelo es la siguiente:
 
 ``` php
 // api/controllers/HeroesController.php
@@ -279,7 +279,7 @@ Puede ver que los metodos corresponden a las operaciones CRUD, Gauler ubica a lo
 api/controllers/
 
 Una vez declarado el modelo mediante el metodo Rest, Gauler le ofrece la posibilidad de ejecutar un CRUD automatico al no declarar el 
-metodo RestFull en el controlador correspondiente al modelo.
+metodo RestFul en el controlador correspondiente al modelo.
 
 ### creando un nuevo heroe
 Suponga que tiene el modelo HeroesModel y ademas ha habilitado su acceso mediante el metodo Rest, al momento
@@ -325,11 +325,11 @@ De esta manera el heroe de nombre "name of new heroe", ha sido creado e insertad
 de la base de datos objetivo, para realizar este ejemplo practico recomiendo el uso de [Postman](https://www.getpostman.com/), herramienta
 muy practica para trabajar con apis.
 
-#### 2. No tiene declarado el metodo restFull "store" en su controlador
+#### 2. No tiene declarado el metodo restFul "store" en su controlador
 En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
 
-#### 3. Si tiene declarado el metodo restFull "store" en su controlador
-Al contar con el metodo restFull "store" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
+#### 3. Si tiene declarado el metodo restFul "store" en su controlador
+Al contar con el metodo restFul "store" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
 metodo, note que el metodo "store" recibe el objeto request con los datos de la solicitud http.
 
 ``` php
