@@ -372,7 +372,10 @@ Mediante el comando
 php gaulerium seeder UsersSeeder
 ```
 
-Podra facilmente sembrar los datos del nuevo usuario en la base de datos, Gauler ha reservado
+Podra facilmente sembrar los datos del nuevo usuario en la base de datos, obviando que de antemano existe la tabla users en la
+ base de datos objetivo, de lo contrario haga la respectiva migracion del modelo users a la base de datos.  
+ 
+Gauler ha reservado
 la URL /api/auth para realizar la autenticacion de usuario, el endpoint /auth requiere la siguiente informacion:
 
 ``` json
