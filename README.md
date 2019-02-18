@@ -394,7 +394,7 @@ Dara como respuesta el siguiente JSON:
             "name": "admin",
             "email": "admin@admin.com"
         },
-        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTA0NTQ0ODMsImV4cCI6MTU1MDQ1ODA4MywiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiNCIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkUWZKeU9neDZ1eVkwdThTcllmb05vT1psMjJMeEFFUTdWa093eXJoQ3pYUU56Y0FHYXhpZVMifX19.LGKHlOwew_c_ibztsKOC5lIA5EhADz8-kvXJ7lml7nE"
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGci..."
     }
 }
 ``` 
