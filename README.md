@@ -57,27 +57,27 @@ fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la defin
 
 ##### 1. Index:  
    Metodo:      GET  
-   URI:         /stores/{id_store}/products  
+   URI:         /shops/{id_store}/products  
    Accion:      Listar todos los productos de una determinada tienda  
    
 ##### 2. Show:  
    Metodo:      GET  
-   URI:         /stores/{id_store}/products/{id}  
+   URI:         /shops/{id_store}/products/{id}  
    Accion:      Obtener el producto mediante su id, que pertenece a una determinada tienda  
    
 ##### 3. Store:  
    Metodo:      POST  
-   URI:         /stores/{id_store}/products 
+   URI:         /shops/{id_store}/products 
    Accion:      Crear un nuevo producto asociado a una determinada tienda  
    
 ##### 4. Update:   
    Metodo:      PUT  
-   URI:         /stores/{id_store}/products/{id}    
+   URI:         /shops/{id_store}/products/{id}    
    Accion:      Actualizar el producto mediante su id, que pertenece a una determinada tienda   
    
 ##### 5. Delete:  
    Metodo:      DELETE  
-   URI:         /stores/{id_store}/products/{id}  
+   URI:         /shops/{id_store}/products/{id}  
    Accion:      Eliminar el producto mediante su id
    
 NOTA: Puedes utilizar todas las URIS sin la necesidad de verificar la relacion con otros modelos, ejemplo:
