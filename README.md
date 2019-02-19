@@ -46,6 +46,15 @@ otro modelo, pero en el desarrollo de api`s, siempre trabajamos con modelos que 
 bien sea relacion de uno a uno, uno a muchos y muchos a muchos, REST define una manera de definir endpoints considerando 
 la relacion.
 
+#### URI jerarquica
+Como podemos ver en la realidad una tienda tiene muchos productos, entonces ¿como podemos definir un endpoint para 
+un determinado producto de una determinada tienda?, o ¿como podemos listar todos los productos de una determinada 
+tienda?.
+
+Estos problemas se pueden resolver de una manera muy facil, solo bastaria pasar los parametros por los cuales 
+quires filtrar la consulta directamente en la URI, pero esta solucion no satisface el proposito por el cual 
+fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la definicion de la propia URI.
+
 ##### 1. Index:  
    Metodo:      GET  
    URI:         /stores/{id_store}/products  
@@ -77,17 +86,6 @@ NOTA: Puedes utilizar todas las URIS sin la necesidad de verificar la relacion c
 Metodo:      GET  
    URI:         /products  
    Accion:      Listar todos los productos existentes 
-
-#### URI jerarquica
-Como podemos ver en la realidad una tienda tiene muchos productos, entonces ¿como podemos definir un endpoint para 
-un determinado producto de una determinada tienda?, o ¿como podemos listar todos los productos de una determinada 
-tienda?.
-
-Estos problemas se pueden resolver de una manera muy facil, solo bastaria pasar los parametros por los cuales 
-quires filtrar la consulta directamente en la URI, pero esta solucion no satisface el proposito por el cual 
-fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la definicion de la propia URI.
-
-
   
 ## Que es Gauler?
 Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar operaciones CRUD a determinados modelos, 
