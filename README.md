@@ -25,7 +25,7 @@ estan establecidos para ser ejecutados por medio de una URI y un metodo especifi
    URI:         /resources/{id}  
    Accion:      Obtener el recurso mediante un id especifico  
    
-##### 3. Store:  
+##### 3. shop:  
    Metodo:      POST  
    URI:         /resources  
    Accion:      Crear un nuevo recurso  
@@ -57,27 +57,27 @@ fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la defin
 
 ##### 1. Index:  
    Metodo:      GET  
-   URI:         /shops/{id_store}/products  
+   URI:         /shops/{id_shop}/products  
    Accion:      Listar todos los productos de una determinada tienda  
    
 ##### 2. Show:  
    Metodo:      GET  
-   URI:         /shops/{id_store}/products/{id}  
+   URI:         /shops/{id_shop}/products/{id}  
    Accion:      Obtener el producto mediante su id, que pertenece a una determinada tienda  
    
-##### 3. Store:  
+##### 3. shop:  
    Metodo:      POST  
-   URI:         /shops/{id_store}/products 
+   URI:         /shops/{id_shop}/products 
    Accion:      Crear un nuevo producto asociado a una determinada tienda  
    
 ##### 4. Update:   
    Metodo:      PUT  
-   URI:         /shops/{id_store}/products/{id}    
+   URI:         /shops/{id_shop}/products/{id}    
    Accion:      Actualizar el producto mediante su id, que pertenece a una determinada tienda   
    
 ##### 5. Delete:  
    Metodo:      DELETE  
-   URI:         /shops/{id_store}/products/{id}  
+   URI:         /shops/{id_shop}/products/{id}  
    Accion:      Eliminar el producto mediante su id
    
 NOTA: Puedes utilizar todas las URIS sin la necesidad de verificar la relacion con otros modelos, ejemplo:
@@ -311,7 +311,7 @@ class HeroesController extends Controller {
 	public function show($id) {		
 	}
 	
-	public function store($request) {		
+	public function shop($request) {		
 	}
 	
 	public function update($id, $request) {		
@@ -372,17 +372,17 @@ De esta manera el heroe de nombre "name of new heroe", ha sido creado e insertad
 de la base de datos objetivo, para realizar este ejemplo practico recomiendo el uso de [Postman](https://www.getpostman.com/), herramienta
 muy practica para trabajar con apis.
 
-#### 2. No tiene declarado el metodo restFul "store" en su controlador
+#### 2. No tiene declarado el metodo restFul "shop" en su controlador
 En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
 
-#### 3. Si tiene declarado el metodo restFul "store" en su controlador
-Al contar con el metodo restFul "store" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
-metodo, note que el metodo "store" recibe el objeto request con los datos de la solicitud http.
+#### 3. Si tiene declarado el metodo restFul "shop" en su controlador
+Al contar con el metodo restFul "shop" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
+metodo, note que el metodo "shop" recibe el objeto request con los datos de la solicitud http.
 
 ``` php
 // api/controllers/HeroesController.php
 .....
-public function store($request) {	
+public function shop($request) {	
   $heroe = new Heroe($request);
   return $heroe;
 }
@@ -581,7 +581,7 @@ class HeroesController extends Controller {
 	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
 	* @return  array
 	*/
-	public function store($request) {		
+	public function shop($request) {		
 	}
 
 
