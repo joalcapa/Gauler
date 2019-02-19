@@ -67,7 +67,7 @@ fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la defin
    
 ##### 3. shop:  
    Metodo:      POST  
-   URI:         /shops/{id_shop}/products 
+   URI:         /shops/{id_shop}/products   
    Accion:      Crear un nuevo producto asociado a una determinada tienda  
    
 ##### 4. Update:   
