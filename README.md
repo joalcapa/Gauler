@@ -38,7 +38,56 @@ estan establecidos para ser ejecutados por medio de una URI y un metodo especifi
 ##### 5. Delete:  
    Metodo:      DELETE  
    URI:         /resources/{id}  
-   Accion:      Eliminar el recurso mediante un id especifico  
+   Accion:      Eliminar el recurso mediante un id especifico 
+   
+#### Metodos RestFul relacionales
+Los metodos antes descritos responden a operaciones CRUD en modelos unicos, los cuales no dependen de relaciones con ningun 
+otro modelo, pero en el desarrollo de api`s, siempre trabajamos con modelos que tienen relaciones con otros modelos, 
+bien sea relacion de uno a uno, uno a muchos y muchos a muchos, REST define una manera de definir endpoints considerando 
+la relacion.
+
+##### 1. Index:  
+   Metodo:      GET  
+   URI:         /stores/{id_store}/products  
+   Accion:      Listar todos los productos de una determinada tienda  
+   
+##### 2. Show:  
+   Metodo:      GET  
+   URI:         /stores/{id_store}/products/{id}  
+   Accion:      Obtener el producto mediante su id, que pertenece a una determinada tienda  
+   
+##### 3. Store:  
+   Metodo:      POST  
+   URI:         /stores/{id_store}/products 
+   Accion:      Crear un nuevo producto asociado a una determinada tienda  
+   
+##### 4. Update:   
+   Metodo:      PUT  
+   URI:         /stores/{id_store}/products/{id}    
+   Accion:      Actualizar el producto mediante su id, que pertenece a una determinada tienda   
+   
+##### 5. Delete:  
+   Metodo:      DELETE  
+   URI:         /stores/{id_store}/products/{id}  
+   Accion:      Eliminar el producto mediante su id
+   
+NOTA: Puedes utilizar todas las URIS sin la necesidad de verificar la relacion con otros modelos, ejemplo:
+
+##### 1. Index:  
+Metodo:      GET  
+   URI:         /products  
+   Accion:      Listar todos los productos existentes 
+
+#### URI jerarquica
+Como podemos ver en la realidad una tienda tiene muchos productos, entonces ¿como podemos definir un endpoint para 
+un determinado producto de una determinada tienda?, o ¿como podemos listar todos los productos de una determinada 
+tienda?.
+
+Estos problemas se pueden resolver de una manera muy facil, solo bastaria pasar los parametros por los cuales 
+quires filtrar la consulta directamente en la URI, pero esta solucion no satisface el proposito por el cual 
+fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la definicion de la propia URI.
+
+
   
 ## Que es Gauler?
 Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar operaciones CRUD a determinados modelos, 
