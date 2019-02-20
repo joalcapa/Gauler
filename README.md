@@ -328,7 +328,7 @@ api/controllers/
 Una vez declarado el modelo mediante el metodo Rest, Gauler le ofrece la posibilidad de ejecutar un CRUD automatico al no declarar el 
 metodo RestFul en el controlador correspondiente al modelo.
 
-### creando un nuevo heroe
+### CRUD automatico
 Suponga que tiene el modelo HeroesModel y ademas ha habilitado su acceso mediante el metodo Rest, al momento
 de crear un nuevo heroe puede verse en alguno de los siguiente casos:
 
