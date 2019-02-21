@@ -490,12 +490,12 @@ metodo, note que el metodo "shop" recibe el objeto request con los datos de la s
 
 ``` php
 // api/controllers/HeroesController.php
-.....
+
 public function shop($request) {	
   $heroe = new Heroe($request);
   return $heroe;
 }
-.....
+
 ```
 
 # Autenticacion
