@@ -139,6 +139,7 @@ Una buena practica es almacenar la informacion secreta en el archivo .env e igno
 puede apreciar la estructura del archivo .env, con el archivo .env.example.
 
 ```
+# .env.example
 DRIVER_DB = 'mysql'
 HOST_DB = '127.0.0.1'
 PORT_DB = '3306'
