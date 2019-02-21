@@ -108,7 +108,7 @@ return [
     'database' => [
         'driver' => env('DRIVER_DB', 'MySql'),
         'host' => env('HOST_DB', 'localhost'),
-        'port' => env('PORT_DB', '2235'),
+        'port' => env('PORT_DB', '3306'),
         'user' => env('USER_DB', 'root'),
         'password' => env('PASSWORD_DB', ''),
         'db' => env('DATABASE_DB', ''),
