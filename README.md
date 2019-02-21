@@ -1,7 +1,6 @@
 # Gauler
 Api standar RestFul by Jose Caceres
 
-# Introduction
 [¿Que es REST?](#hablemos-un-poco-de-las-apis-restFul)  
 [¿Que es Gauler?](#que-es-gauler?)  
 [Instalacion y configuracion](#instalacion)  
