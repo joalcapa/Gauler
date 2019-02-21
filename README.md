@@ -92,7 +92,7 @@ Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar op
 mediante la ejecucion de logica escrita en los metodos RestFul establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
 no existen vistas ya que se trata de una api RestFul.
 
-### Creando proyecto Gauler
+# Instalacion de Gauler
 
 ```
 composer create-project joalcapa/gauler
