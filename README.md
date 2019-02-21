@@ -538,8 +538,8 @@ la URL /api/auth para realizar la autenticacion de usuario, el endpoint /auth re
 // Metodo POST
 // Body en json
 {
-	"email": "admin@admin.com",
-	"password": "123456789Password"
+  "email": "admin@admin.com",
+  "password": "123456789Password"
 }
 ``` 
 
@@ -573,9 +573,9 @@ generando de esa manera un nuevo token de acceso.
 // Metodo POST
 // Body en json
 {
-	"email": "admin@admin.com",
-	"password": "123456789Password",
-	"newPassword": "newPassword"
+  "email": "admin@admin.com",
+  "password": "123456789Password",
+  "newPassword": "newPassword"
 }
 ``` 
 
