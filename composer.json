@@ -17,8 +17,8 @@
      },
     "require": {
         "php": ">=7.0.0",
-        "joalcapa/fundamentary": "^1.2.10",
+        "joalcapa/fundamentary": "^1.2.11",
         "symfony/console": "^4.2",
-        "joalcapa/elementary": "^0.0.4"
+        "joalcapa/elementary": "^0.0.5"
     }
 }
