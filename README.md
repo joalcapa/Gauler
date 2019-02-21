@@ -110,6 +110,46 @@ depende del framework o biblioteca, es el estandarte de ReactJs, por que si quie
 
 Para este proposito explicare el funcionamiento de Gauler, mediante el concepto de "heroes".
 
+# Configuracion de Gauler
+La configuracion de Gauler se encuentra en el archivo config/config.php
+
+``` php
+<?php
+// config/config.php
+return [
+    'database' => [
+        'driver' => env('DRIVER_DB', 'MySql'),
+        'host' => env('HOST_DB', 'localhost'),
+        'port' => env('PORT_DB', '2235'),
+        'user' => env('USER_DB', 'root'),
+        'password' => env('PASSWORD_DB', ''),
+        'db' => env('DATABASE_DB', ''),
+    ],
+    'auth' => [
+        'key' => env('KEY_AUTH', 'my_key_secret'),
+    ]
+];
+```
+
+Gauler utiliza la biblioteca [Dotenv](https://github.com/vlucas/phpdotenv) para definir las variables de entorno necesarias para
+el correcto funcionamiento de Gauler, el array anterior esta compuesto por la configuracion necesaria para la conexion 
+a la base de datos y la clave secreta para encriptar el token de autorizacion.
+
+Una buena practica es almacenar la informacion secreta en el archivo .env e ignorarlo en el sistema de control de versiones elegido,
+puede apreciar la estructura del archivo .env, con el archivo .env.example.
+
+```
+DRIVER_DB = 'mysql'
+HOST_DB = '127.0.0.1'
+PORT_DB = '3306'
+USER_DB = 'root'
+PASSWORD_DB =
+DATABASE_DB = 'gauler'
+
+HOST_API = 'localhost/app/public'
+KEY_AUTH = 'my_key_secret'
+```
+
 # Vamos a crear el modelo de un heroe
 Si vienes trabajando en el lado del back-end, 
 habras notado que la mayoria de los frameworks como Laravel, Yii2, Symfony, LoopBack entre otros,

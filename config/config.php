@@ -10,13 +10,9 @@
 | de variables de entorno .env, que se encuentrá en la
 | ruta raíz principal del proyecto.
 |
-| Gauler se encuentra versionado, por lo que utilizá git.
-|
 */
 
 return [
-    
-    
     'database' => [
         'driver' => env('DRIVER_DB', 'MySql'),
         'host' => env('HOST_DB', 'localhost'),
@@ -25,8 +21,6 @@ return [
         'password' => env('PASSWORD_DB', ''),
         'db' => env('DATABASE_DB', ''),
     ],
-    
-    
     'auth' => [
         'key' => env('KEY_AUTH', 'my_key_secret'),
     ]
