@@ -1,6 +1,17 @@
 # Gauler
 Api standar RestFul by Jose Caceres
 
+# Introduction
+[¿Que es REST?](#hablemos-un-poco-de-las-apis-restFul)  
+[¿Que es Gauler?](#que-es-gauler?)  
+[Instalacion y configuracion](#instalacion)  
+[Modelos](#que-vuelvan-los-heroes)  
+[Rutas](#rutas-del-modelo)  
+[Controladores](#controlador-del-modelo)  
+[CRUD automatico](#crud-automatico)  
+[Autenticacion](#autenticacion)  
+[Gaulerium CLI](#gaulerium-cli)  
+
 ## Hablemos un poco de las apis RestFul
 Existen diversos servicios web como lo son SOAP, GraphQL entre otros.
 Pero REST es el servicio web popular por excelencia, muchos sistemas y frameworks trabajan bajo esta arquitectura, aproximadamente en el 
@@ -92,7 +103,7 @@ Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar op
 mediante la ejecucion de logica escrita en los metodos RestFul establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
 no existen vistas ya que se trata de una api RestFul.
 
-# Instalacion de Gauler mediante composer
+# Instalacion
 
 ```
 composer create-project joalcapa/gauler
