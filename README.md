@@ -219,6 +219,64 @@ $filters = [
 ];
 $heroes = Heroes::where($filters);
 ```
+
+### Filtros de consulta
+Para obtener determinados heroes que cumplen con ciertos parametros, es necesario armar un array que 
+contengan dichos parametros de la siguiente manera:
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$filters = [
+   Heroes::EQUALS('powerType', 'run fast')
+];
+$heroes = Heroes::where($filters);
+```
+
+Gauler traduce el array $filters a una consulta SQL mediante el metodo "where", en este caso la consulta SQL es la siguiente:
+
+``` sql
+WHERE powerType = 'run fast'
+```
+
+Como habras notado el metodo 'EQUALS' es el equivalente a la expresion '$attribute = $value', para añadir otro parametro 
+de consulta basta con agregarlo al array de la siguiente forma:
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$filters = [
+   Heroes::EQUALS('powerType', 'run fast'),
+   Heroes::EQUALS('id', $request->id)
+];
+```
+
+El resultado es la siguiente expresion SQL:
+
+``` sql
+WHERE powerType = 'run fast' AND id = 'value of request'
+```
+
+Si deseas utilizar un valor alternativo a 'run fast', puedes especificarlo mediante el metodo 'OR', de la siguiente manera:
+
+``` php
+use Gauler\Api\Models\HeroesModel as Heroes;
+
+$filters = [
+   Heroes::EQUALS('powerType', 'run fast'),
+   Heroes::OR(
+      Heroes::EQUALS('powerType', 'other power'),
+      Heroes::EQUALS('id', $request->id)
+   )
+];
+```
+
+El resultado es la siguiente expresion SQL:
+
+``` sql
+WHERE powerType = 'run fast' OR ( powerType = 'other power' AND id = 'value of request' )
+```
+
 ### actualizar un modelo en la base de datos mediante el id
 Para actualizar un registro en la base de datos, se requiere el id, pero existen dos formas de hacerlo:
 
@@ -372,7 +430,7 @@ De esta manera el heroe de nombre "name of new heroe", ha sido creado e insertad
 de la base de datos objetivo, para realizar este ejemplo practico recomiendo el uso de [Postman](https://www.getpostman.com/), herramienta
 muy practica para trabajar con apis.
 
-#### 2. No tiene declarado el metodo restFul "shop" en su controlador
+#### 2. No tiene declarado el metodo restFul "store" en su controlador
 En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
 
 #### 3. Si tiene declarado el metodo restFul "shop" en su controlador
