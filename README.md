@@ -98,18 +98,6 @@ no existen vistas ya que se trata de una api RestFul.
 composer create-project joalcapa/gauler
 ```
 
-# Que vuelvan los HEROES
-Hace ya algunos años cuando comence a documentarme con Angular, me parecio muy peculiar que el equipo de Angular utilizara
-el concepto de "heroes" para explicar el funcionamiento de su plataforma, debo aceptar que al igual que a muchos, el cambio de la 
-version 1 a la version 2 de Angular fue muy abrumador, despues de todo TypeScript es un superconjunto de javascript que resuelve 
-muchos problemas, siendo el mas importante el tipado. Si te gusta Java, TypeScript es para ti.
-
-Los "heroes" llegaron para explicar el funcionamiento de una plataforma que prometia mucho en ese entonces, ahora bien, admitamos que ReactJs
-hace las cosas mas simples que Angular y su comunidad ha lanzado potentes herramientas como Redux, siendo Redux una herramienta que no 
-depende del framework o biblioteca, es el estandarte de ReactJs, por que si quieres desarrollar en ReactJs o incluso en React-Native, debes saber Redux.
-
-Para este proposito explicare el funcionamiento de Gauler, mediante el concepto de "heroes".
-
 # Configuracion de Gauler
 La configuracion de Gauler se encuentra en el archivo config/config.php
 
@@ -150,6 +138,18 @@ DATABASE_DB = 'gauler'
 HOST_API = 'localhost/app/public'
 KEY_AUTH = 'my_key_secret'
 ```
+
+# Que vuelvan los HEROES
+Hace ya algunos años cuando comence a documentarme con Angular, me parecio muy peculiar que el equipo de Angular utilizara
+el concepto de "heroes" para explicar el funcionamiento de su plataforma, debo aceptar que al igual que a muchos, el cambio de la 
+version 1 a la version 2 de Angular fue muy abrumador, despues de todo TypeScript es un superconjunto de javascript que resuelve 
+muchos problemas, siendo el mas importante el tipado. Si te gusta Java, TypeScript es para ti.
+
+Los "heroes" llegaron para explicar el funcionamiento de una plataforma que prometia mucho en ese entonces, ahora bien, admitamos que ReactJs
+hace las cosas mas simples que Angular y su comunidad ha lanzado potentes herramientas como Redux, siendo Redux una herramienta que no 
+depende del framework o biblioteca, es el estandarte de ReactJs, por que si quieres desarrollar en ReactJs o incluso en React-Native, debes saber Redux.
+
+Para este proposito explicare el funcionamiento de Gauler, mediante el concepto de "heroes".
 
 # Vamos a crear el modelo de un heroe
 Si vienes trabajando en el lado del back-end, 
