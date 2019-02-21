@@ -2,7 +2,7 @@
 Api standar RestFul by Jose Caceres
 
 [¿Que es REST?](#hablemos-un-poco-de-las-apis-restFul)  
-[¿Que es Gauler?](#gauler)  
+[¿Que es Gauler?](#api-gauler)  
 [Instalacion y configuracion](#instalacion)  
 [Modelos](#que-vuelvan-los-heroes)  
 [Rutas](#rutas-del-modelo)  
@@ -97,7 +97,7 @@ Metodo:      GET
    URI:         /products  
    Accion:      Listar todos los productos existentes 
   
-# Gauler
+# Api Gauler
 Gauler es una propuesta para desarrollar un sistema simple, capaz de ejecutar operaciones CRUD a determinados modelos, 
 mediante la ejecucion de logica escrita en los metodos RestFul establecidos en sus controladores, esta orientando al patron Modelo-Controlador,
 no existen vistas ya que se trata de una api RestFul.
