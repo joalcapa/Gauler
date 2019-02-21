@@ -451,9 +451,9 @@ Los atributos asignados al modelo HeroesModel son, name y powerType.
 // api/models/HeroesModel.php
 .....
 protected $tuples = [
-		'name',
-		'powerType',
-	];
+		      'name',
+		      'powerType',
+	      ];
 .....
 ```
 
