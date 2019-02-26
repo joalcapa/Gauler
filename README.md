@@ -136,7 +136,7 @@ Gauler utiliza la biblioteca [Dotenv](https://github.com/vlucas/phpdotenv) para 
 el correcto funcionamiento de Gauler, el array anterior esta compuesto por la configuracion necesaria para la conexion 
 a la base de datos y la clave secreta para encriptar el token de autorizacion.
 
-Una buena practica es almacenar la informacion secreta en el archivo .env e ignorarlo en el sistema de control de versiones elegido,
+Una buena practica consiste en almacenar la informacion secreta en el archivo .env e ignorarlo en el sistema de control de versiones elegido,
 puede apreciar la estructura del archivo .env, con el archivo .env.example.
 
 ```
