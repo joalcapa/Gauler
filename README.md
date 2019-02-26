@@ -565,6 +565,19 @@ estableciendo la cabecera de Authorization de la siguiente manera:
 Authorization: Bearer $token
 ``` 
 
+### Usuario autenticado
+Una vez el token es desencriptado se puede acceder a la informacion del usuario autenticado mediante la clase Auth, de 
+la siguiente manera:
+
+``` php
+use Auth;
+
+$auth = Auth::getAuth();
+$auth->id;
+$auth->name;
+$auth->email;
+``` 
+
 ## Cambiar contraseña
 Gauler ha reservado la URL /api/auth/reset-password para el mecanismo de cambio de contraseña por el metodo POST, 
 generando de esa manera un nuevo token de acceso.
