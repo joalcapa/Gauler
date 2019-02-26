@@ -35,7 +35,7 @@ estan establecidos para ser ejecutados por medio de una URI y un metodo especifi
    URI:         /resources/{id}  
    Accion:      Obtener el recurso mediante un id especifico  
    
-##### 3. shop:  
+##### 3. Store:  
    Metodo:      POST  
    URI:         /resources  
    Accion:      Crear un nuevo recurso  
@@ -75,7 +75,7 @@ fue pensada la arquitectura REST, la solucion es muy sencilla y esta en la defin
    URI:         /shops/{id_shop}/products/{id}  
    Accion:      Obtener el producto mediante su id, que pertenece a una determinada tienda  
    
-##### 3. shop:  
+##### 3. Store:  
    Metodo:      POST  
    URI:         /shops/{id_shop}/products   
    Accion:      Crear un nuevo producto asociado a una determinada tienda  
@@ -420,7 +420,7 @@ class HeroesController extends Controller {
 	public function show($id) {		
 	}
 	
-	public function shop($request) {		
+	public function store($request) {		
 	}
 	
 	public function update($id, $request) {		
@@ -484,14 +484,14 @@ muy practica para trabajar con apis.
 #### 2. No tiene declarado el metodo restFul "store" en su controlador
 En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
 
-#### 3. Si tiene declarado el metodo restFul "shop" en su controlador
-Al contar con el metodo restFul "shop" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
-metodo, note que el metodo "shop" recibe el objeto request con los datos de la solicitud http.
+#### 3. Si tiene declarado el metodo restFul "store" en su controlador
+Al contar con el metodo restFul "store" en el controlador api/controllers/HeroesController.php, Gauler ejecuta este
+metodo, note que el metodo "store" recibe el objeto request con los datos de la solicitud http.
 
 ``` php
 // api/controllers/HeroesController.php
 
-public function shop($request) {	
+public function store($request) {	
   $heroe = new Heroe($request);
   return $heroe;
 }
@@ -690,7 +690,7 @@ class HeroesController extends Controller {
 	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
 	* @return  array
 	*/
-	public function shop($request) {		
+	public function store($request) {		
 	}
 
 
