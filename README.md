@@ -125,6 +125,9 @@ return [
     ],
     'auth' => [
         'key' => env('KEY_AUTH', 'my_key_secret'),
+    ],
+    'api' => [
+        'version' => 1
     ]
 ];
 ```
