@@ -401,7 +401,56 @@ Rest::Model('heroes', function($request) {
 ```
 
 Recuerde retornar el objeto request si desea continuar con la ejecucion de la logica del modelo, de lo contrario 
-podra utilizar el metodo killer para abortar la operacion con el codigo http que considere conveniente.  
+podra utilizar el metodo killer para abortar la operacion con el codigo http que considere conveniente. 
+
+# Rutas de la api
+Si deseas establecer endpoints bajo rutas que no estan asociadas a ninguna operacion CRUD de un determinado modelo, puedes declarar 
+dichas rutas en el archivo api de la siguiente manera:
+
+``` php
+// routes/api.php
+<?php
+
+Api::Route('/hello', 'api@hello');
+
+```
+
+Como puedes observar el metodo Api::Route recibe como parametro la ruta y la declaracion del metodo del controlador asignado, el controlador 
+debe estar en el directorio api/controllers del proyecto, de la siguiente manera:
+
+``` php
+// api/controllers/apiController.php
+<?php
+
+namespace Gauler\Api\Controllers;
+
+class ApiController {
+
+    public function hello($request) {
+        return [
+            'message' => 'hello'
+        ];
+    }
+}
+
+```
+
+El metodo declarado recibira el objeto request con los parametros GET y POST correspondientes.
+
+### middleware de la ruta
+Al igual que el middleware del modelo, puedes asignar una funciona anonima para restringir o no el acceso al metodo del 
+controlador.
+
+``` php
+// routes/rest.php
+<?php
+
+Api::Route('/hello', 'api@hello', function($request) {
+    // killer('401');
+    return $request;
+});
+
+```
 
 # Controlador del modelo 
 Los controladores del modelo se conocen como controladores RestFul, puesto que ejecutan la logica correspondiente
