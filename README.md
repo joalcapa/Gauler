@@ -6,6 +6,7 @@ Api standar RestFul by Jose Caceres
 [Instalacion y configuracion](#instalacion)  
 [Modelos](#que-vuelvan-los-heroes)  
 [Rutas](#rutas-del-modelo)  
+[Middlewares](#middlewares)  
 [Controladores](#controlador-del-modelo)  
 [CRUD automatico](#crud-automatico)  
 [Autenticacion](#autenticacion)  
@@ -490,7 +491,8 @@ Middleware::Meet('api', function() {
 ```
 
 Como puede observar puede agrupar las rutas que considere en un solo middleware, de esta manera evita el tener 
-que asignar funciones anonimas en cada una de las rutas de la api que necesiten ejecutar el mismo middleware.
+que asignar funciones anonimas en cada una de las rutas de la api que necesiten ejecutar el mismo middleware, como primer 
+parametro debes especificar el nombre del middleware ubicado en el directorio Api/Middlewares.
 
 # Controlador del modelo 
 Los controladores del modelo se conocen como controladores RestFul, puesto que ejecutan la logica correspondiente
