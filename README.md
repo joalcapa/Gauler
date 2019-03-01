@@ -494,6 +494,8 @@ Como puede observar puede agrupar las rutas que considere en un solo middleware,
 que asignar funciones anonimas en cada una de las rutas de la api que necesiten ejecutar el mismo middleware, como primer 
 parametro debes especificar el nombre del middleware ubicado en el directorio Api/Middlewares.
 
+NOTA: puedes crear facilmente los middlewares mediante Gaulerium CLI.  
+
 # Controlador del modelo 
 Los controladores del modelo se conocen como controladores RestFul, puesto que ejecutan la logica correspondiente
 a la operacion CRUD del modelo, para crear un controlador puede hacer uso de "Gaulerium", la interfaz de linea de comandos que Gauler
