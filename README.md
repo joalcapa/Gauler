@@ -452,6 +452,46 @@ Api::Route('/hello', 'api@hello', function($request) {
 
 ```
 
+# Middlewares
+Como pudo observar tanto los modelos REST como las rutas de la api, tiene la ventaja de ejecutar una funcion anonima 
+que actua como un proceso middleware, dicha funcion solo se ejecuta para el modelo REST o la ruta de la api que lo asigno,
+si desea establecer un proceso middleware para varias rutas de la api o varios modelos REST, puede crear una clase middleware 
+en el directorio api/middlewares de la siguiente manera:
+
+``` php
+// Api/Middlewares/ApiMiddleware.php
+<?php
+
+namespace Gauler\Api\Middlewares;
+
+class ApiMiddleware {
+
+    public function middle($request, $next) {
+        // killer(401);
+        $next();
+    }
+}
+```
+
+Todo middleware declarado en este directorio debe contener el metodo middle, en el cual puedes 
+abortar la operacion de la ruta de la api o del modelo REST con el codigo http que considere, 
+si por el contrario desea seguir con la ejecucion de la logica correspondiente, debe proceder a realizar 
+la llamada $next(), la funcion next ejecuta el grupo de las rutas de la api o de los modelos REST asignados de la siguiente manera 
+en los archivos routes/api.php y routes/rest.php:
+
+``` php
+// routes/api.php
+<?php
+
+Middleware::Meet('api', function() {
+     // Aqui puede colocar las rutas que desee
+     Api::Route('/hello', 'api@hello');
+});
+```
+
+Como puede observar puede agrupar las rutas que considere en un solo middleware, de esta manera evita el tener 
+que asignar funciones anonimas en cada una de las rutas de la api que necesiten ejecutar el mismo middleware.
+
 # Controlador del modelo 
 Los controladores del modelo se conocen como controladores RestFul, puesto que ejecutan la logica correspondiente
 a la operacion CRUD del modelo, para crear un controlador puede hacer uso de "Gaulerium", la interfaz de linea de comandos que Gauler
