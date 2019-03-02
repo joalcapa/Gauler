@@ -439,7 +439,7 @@ class ApiController {
 El metodo declarado recibira el objeto request con los parametros GET y POST correspondientes.
 
 ### middleware de la ruta
-Al igual que el middleware del modelo, puedes asignar una funciona anonima para restringir o no el acceso al metodo del 
+Al igual que el middleware del modelo, puedes asignar una funcion anonima para restringir o no el acceso al metodo del 
 controlador.
 
 ``` php
