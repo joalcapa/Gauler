@@ -201,15 +201,15 @@ use Joalcapa\Fundamentary\App\Models\BaseModel as Model;
 
 class HeroesModel extends Model {
 
-	public static $model = 'Heroes';
+  public static $model = 'Heroes';
 
-	protected $tuples = [
-		'name',
-		'powerType',
-	];
+  protected $tuples = [
+	 'name',
+	 'powerType',
+  ];
 
-	protected $hidden_tuples = [
-	];
+  protected $hidden_tuples = [
+  ];
 }
 ```
 
@@ -524,20 +524,20 @@ namespace Gauler\Api\Controllers;
 
 class HeroesController extends Controller {
 
-	public function index($request) {		
-	}
+  public function index($request) {
+  }
 
-	public function show($id) {		
-	}
+  public function show($id) {		
+  }
 	
-	public function store($request) {		
-	}
+  public function store($request) {		
+  }
 	
-	public function update($id, $request) {		
-	}
+  public function update($id, $request) {		
+  }
 	
-	public function destroy($id) {		
-	}
+  public function destroy($id) {		
+  }
 }
 ```
 
@@ -741,15 +741,15 @@ use Joalcapa\Fundamentary\App\Models\BaseModel as Model;
 
 class HeroesModel extends Model {
 
-	public static $model = 'Heroes';
+  public static $model = 'Heroes';
 
-	protected $tuples = [
-		'name',
-		'powerType',
-	];
+  protected $tuples = [
+    'name',
+	'powerType',
+  ];
 
-	protected $hidden_tuples = [
-	];
+  protected $hidden_tuples = [
+  ];
 }
 ```
 
@@ -813,45 +813,20 @@ namespace Gauler\Api\Controllers;
 
 class HeroesController extends Controller {
 
-	/**
-	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
-	* @return  array
-	*/
-	public function index($request) {
-	}
+  public function index($request) {
+  }
 
+  public function show($id) {		
+  }
 
-	/**
-	* @param  $id
-	* @return  array
-	*/
-	public function show($id) {		
-	}
+  public function store($request) {		
+  }
 
+  public function update($id, $request) {		
+  }
 
-	/**
-	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
-	* @return  array
-	*/
-	public function store($request) {		
-	}
-
-
-	/**
-	* @param  $id
-	* @param  \Fundamentary\Http\Interactions\Request\Request  $request
-	* @return  array
-	*/
-	public function update($id, $request) {		
-	}
-
-
-	/**
-	* @param  $id
-	* @return  array
-	*/
-	public function destroy($id) {		
-	}
+  public function destroy($id) {		
+  }
 }
 ```
 
@@ -884,10 +859,10 @@ use Joalcapa\Elementary\Migrations\BaseMigration as Migration;
 
 class HeroesMigration extends Migration {
 
-	public $attributes = [
-		'name' => TypeAttrQ::STRING,
-		'power' => TypeAttrQ::STRING,
-	];
+  public $attributes = [
+	'name' => TypeAttrQ::STRING,
+	'power' => TypeAttrQ::STRING,
+  ];
 }
 ```
 
