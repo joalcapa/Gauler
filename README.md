@@ -165,6 +165,9 @@ Response:
 }
 ```
 
+Para realizar este ejemplo practico y muchos otros, recomiendo el uso de [Postman](https://www.getpostman.com/), herramienta
+muy practica para trabajar con apis.
+
 # Que vuelvan los HEROES
 Hace ya algunos años cuando comence a documentarme con Angular, me parecio muy peculiar que el equipo de Angular utilizara
 el concepto de "heroes" para explicar el funcionamiento de su plataforma, debo aceptar que al igual que a muchos, el cambio de la 
@@ -586,8 +589,7 @@ El resultado de la peticion POST CREATE, sera el siguiente json:
 ```
 
 De esta manera el heroe de nombre "name of new heroe", ha sido creado e insertado en la tabla heroes 
-de la base de datos objetivo, para realizar este ejemplo practico recomiendo el uso de [Postman](https://www.getpostman.com/), herramienta
-muy practica para trabajar con apis.
+de la base de datos objetivo.
 
 #### 2. No tiene declarado el metodo restFul "store" en su controlador
 En este caso, Gauler ejecutara la operacion CREATE de manera automatica al igual que en el caso anterior.
