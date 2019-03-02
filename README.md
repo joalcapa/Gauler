@@ -758,6 +758,27 @@ TypeAttrQ::FLOAT;    // float
 
 #### creacion del modelo con su migracion
 Si el modelo se crea con sus atributos, Gauler creara el correspondiente archivo de migracion asociado al modelo. 
+
+## crear middlewares
+Para crear un archivo middleware, es tan facil como ejecutar el siguiente comando:
+```
+php gaulerium createMiddleware api
+```
+
+El resultado es la creacion de una nueva clase en el directorio Api/Middlewares con las siguientes caracteristicas:
+``` php
+<?php
+
+namespace Gauler\Api\Middlewares;
+
+class ApiMiddleware {
+
+    public function middle($request, $next) {
+        // killer(401);
+        $next();
+    }
+}
+```
        
 ## crear controlador
 Por defecto Gauler ejecuta un proceso CRUD automatico cuando no existe un controlador asociado al modelo, 
