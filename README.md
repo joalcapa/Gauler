@@ -156,10 +156,9 @@ KEY_AUTH = 'my_key_secret'
 Una vez tenga preparado todo lo necesario para ejecutar una aplicacion PHP como Gauler en su entorno bien sea local, dev, qa, stage o prod, 
 puede verificar el correcto funcionamiento de Gauler mediante la URL /api, de la siguiente manera:
 
-URL: /api  
-Metodo: GET  
-Response:
 ``` json
+// URL: /api  
+// Metodo: GET  
 {
     "message": "Gauler api"
 }
