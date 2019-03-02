@@ -152,6 +152,19 @@ DATABASE_DB = 'gauler'
 KEY_AUTH = 'my_key_secret'
 ```
 
+# Gauler en funcionamiento
+Una vez tenga preparado todo lo necesario para ejecutar una aplicacion PHP como Gauler en su entorno bien sea local, dev, qa, stage o prod, 
+puede verificar el correcto funcionamiento de Gauler mediante la URL /api, de la siguiente manera:
+
+URL: /api
+Metodo: GET
+Response:
+``` json
+{
+    "message": "Gauler api"
+}
+```
+
 # Que vuelvan los HEROES
 Hace ya algunos años cuando comence a documentarme con Angular, me parecio muy peculiar que el equipo de Angular utilizara
 el concepto de "heroes" para explicar el funcionamiento de su plataforma, debo aceptar que al igual que a muchos, el cambio de la 
